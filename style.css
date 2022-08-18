@@ -61,6 +61,80 @@ body {
     color: lightsteelblue;
 }
 
+.loginAndRegister{
+    margin-top: 100px;
+}
+
+.Login{  
+    width: 382px;  
+    overflow: hidden;  
+    margin: auto;  
+    margin: 20 0 0 450px;  
+    padding: 80px;   
+    border-radius: 15px ;  
+    background-color: grey;
+      
+}  
+
+.Register{
+    width: 382px;  
+    overflow: hidden;  
+    margin: auto;  
+    margin: 20 0 0 450px;  
+    padding: 80px;   
+    border-radius: 15px ;
+    background-color: grey;  
+}
+
+h2{  
+    text-align: center;  
+    color: #277582;  
+    padding: 20px;  
+}
+
+.loginLabel{  
+    color: lightgrey;  
+    font-size: 17px;  
+    text-align: center;
+}  
+
+.registerLabel{  
+    color: lightgrey;  
+    font-size: 17px;  
+    text-align: center;
+} 
+
+Label{  
+    color: lightgrey;  
+    font-size: 17px;  
+}  
+
+#username{  
+    width: 350px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+}  
+
+#password{
+    width: 350px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+}
+
+#button{  
+    width: 300px;  
+    height: 30px; 
+    margin: 30px; 
+    border: none;  
+    border-radius: 17px;  
+    padding-left: 7px;  
+    color: black;  
+}  
+
 @media screen and (min-width: 700px) {
     .topbar ul{
         text-align: right;

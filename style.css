@@ -71,7 +71,8 @@ body {
     overflow: hidden;  
     margin: auto;  
     margin: 20 0 0 450px;  
-    padding: 80px;   
+    padding: 80px;
+    padding-bottom: 132px;   
     background-color: grey;
       
 }  
@@ -140,6 +141,7 @@ Label{
 
 .registerbox{
     margin-left: 10%;
+    height: 400px;
 }
 
 @media screen and (min-width: 700px) {

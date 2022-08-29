@@ -4,30 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="homeStyle.css"> 
     <title>Home</title>
 </head>
 <body>
-    <div class="topbar">
-        <ul>
-            <li>
-                Login
-            </li>
-        </ul>
-    </div>
     <div class="nav">
-        <ul>
-            <li>
-                Home
-            </li>
-            <li>
-                Books
-            </li>
-            <input type="text", placeholder="Search for book">
-        </ul>
+        <input type="button" name="homeButton" id="homeButton" value="Home" onclick="window.location.href='Home.html'">
+        <input type="button" name="booksButton" id="booksButton" value="Books" onclick="window.location.href='Books.html'">
+        <input type="text" name="searchBox" id="searchBox" placeholder="Search for book">
+        <input type="button" name="loginButton" id="loginButton" value="Login" onclick="window.location.href='Login.html'">
+        
     </div>
     <div class="banner">insert image here</div>
-    <div class="main">hello</div>
+    <div class="booksContainer">
+        <div class="popularBooks">popular books</div>
+        <div class="newBooks">new books</div>
+    </div>
+
 </body>
 <footer>
     <a href="">Contact Us</a> 

@@ -2,21 +2,20 @@ body {
     background-color: rgba(245, 122, 7, 0.5);
 }
 
-.Register {
+.Resetpassword {
     border: 1px solid #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
     width: 900px;
     overflow: hidden;
     margin: auto;
-    /* margin: 20 0 0 450px; */
     padding-top: 40px;
     padding-bottom: 132px;
     background-color: white;
     position: relative;
 }
 
-.registerLabel {
+.resetPassLabel {
     color: black;
     font-size: 30px;
     text-align: center;
@@ -27,19 +26,11 @@ Label{
     font-size: 17px;
 }
 
-.Email {
+.Newpassword {
     margin: 40px 30%;
 }
 
-.Username {
-    margin: 40px 30%;
-}
-
-.Password {
-    margin: 40px 30%;
-}
-
-.ConfirmPassword {
+.Confirmpassword {
     margin: 40px 30%;
 }
 
@@ -51,7 +42,7 @@ input[type=text] {
     padding-left: 8px; 
 }
 
-input[name=signUpButton] {
+input[name=resetPassButton] {
     width: 186px;
     height: 40px;
     margin: 0px 75%;
@@ -63,7 +54,7 @@ input[name=signUpButton] {
     color: black;
 }
 
-.registerbox {
+.resetPassBox {
     margin-top: 10%;
     font-family: arial;
 }

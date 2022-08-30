@@ -87,6 +87,11 @@ Label{
     color: black;  
 }  
 
+#button:hover {
+    background-color: grey;
+    color: white;
+}
+
 .signupText{
     text-align: center;
 }

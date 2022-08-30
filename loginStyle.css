@@ -97,6 +97,7 @@ Label{
 }
 
 .loginbox{
-    margin-top: 10%;
+    margin-top: 100px;
+    margin-bottom: 100px;
     font-family: arial;
 }

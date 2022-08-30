@@ -54,12 +54,24 @@ input[type=text] {
 input[name=signUpButton] {
     width: 186px;
     height: 40px;
-    margin: 0px 75%;
+    margin-left: 230px;
     border: 1px solid black;
     border-radius: 20px;
     padding-left: 7px;
+    top: 50px;
     position: relative;
-    bottom: -90px;
+    color: black;
+}
+
+input[name=backButton] {
+    width: 186px;
+    height: 40px;
+    margin-left: 150px;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding-left: 7px;
+    top: 50px;
+    position: relative;
     color: black;
 }
 
@@ -68,7 +80,13 @@ input[name=signUpButton] {
     color: white;
 }
 
+.buttons {
+    width: 100%;
+    height: 40px;
+}
+
 .registerbox {
-    margin-top: 10%;
+    margin-top: 100px;
+    margin-bottom: 100px;
     font-family: arial;
 }

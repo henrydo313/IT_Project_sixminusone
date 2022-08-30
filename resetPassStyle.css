@@ -54,6 +54,11 @@ input[name=resetPassButton] {
     color: black;
 }
 
+#button:hover {
+    background-color: grey;
+    color: white;
+}
+
 .resetPassBox {
     margin-top: 10%;
     font-family: arial;

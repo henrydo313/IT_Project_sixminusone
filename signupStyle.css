@@ -63,6 +63,11 @@ input[name=signUpButton] {
     color: black;
 }
 
+#button:hover {
+    background-color: grey;
+    color: white;
+}
+
 .registerbox {
     margin-top: 10%;
     font-family: arial;

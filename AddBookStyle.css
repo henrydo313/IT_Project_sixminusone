@@ -1,0 +1,118 @@
+body {
+    background-color: rgba(245, 122, 7, 0.5);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.AddBookLabel {
+    color: black;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 3%;
+}
+
+.BookInfoLabel {
+    color: black;
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.Labels {
+    display: inline-flex;
+    width: 100%;
+    margin: 10px 20% 10px; 
+}
+
+.Inputs {
+    display: inline-flex;
+    width: 100%;
+    margin: 10px 20% 10px; 
+}
+
+.BookCategory {
+    margin-left: 30%;
+}
+
+#BookName {
+    width: 25%; 
+    height: 30px;  
+    border: 1px solid black;  
+    border-radius: 10px; 
+    padding-left: 8px; 
+}
+
+#BookCategory {
+    margin-left: 12%;
+    width: 25%; 
+    height: 30px;  
+    border: 1px solid black;  
+    border-radius: 10px; 
+    padding-left: 8px; 
+}
+
+.BookISBN {
+    margin-left: 34%;
+}
+
+#BookAuthor {
+    width: 25%; 
+    height: 30px;  
+    border: 1px solid black;  
+    border-radius: 10px; 
+    padding-left: 8px; 
+}
+
+#BookISBN {
+    margin-left: 12%;
+    width: 25%; 
+    height: 30px;  
+    border: 1px solid black;  
+    border-radius: 10px; 
+    padding-left: 8px; 
+}
+
+.BookCover {
+    margin-left: 35.5%;
+}
+
+#BookPrice {
+    width: 25%; 
+    height: 30px;  
+    border: 1px solid black;  
+    border-radius: 10px; 
+    padding-left: 8px; 
+}
+
+.AddBookContainer {
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    width: 900px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 5%;
+    padding-top: 40px;
+    padding-bottom: 5%;
+    background-color: white;
+    position: relative;
+}
+
+.AddCoverContainer {
+    margin-left: 12%;
+    display: flex;
+}
+
+#button {
+    width: 100px;  
+    height: 30px; 
+    border: 1px solid black; 
+    border-radius: 17px;  
+    padding-left: 7px;  
+    color: black; 
+}
+
+.CoverText {
+    font-size: 15px;
+    margin-top: 5px;
+    margin-left: 10px;
+}

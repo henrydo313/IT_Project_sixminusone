@@ -6,30 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <link rel="stylesheet" href="signupStyle.css"> 
-</head>
+    <script src="Signup.js"></script>
 <body>
-    <form>
+    <form name ="signupForm" onsubmit="return validateForm()">
         <div class="Register">
             <h1>Sign Up</h1>
             <div class="Email">
                 <label>Email</label>
-                <input type="email" name="email" id="email" placeholder="Enter email">
+                <input type="email" name="email" id="email" placeholder="Enter email" required>
             </div>
             <div class="Username">
                 <label>Username</label>
-                <input type="text" name="username" id="username" placeholder="Enter username">
+                <input type="text" name="username" id="username" placeholder="Enter username" required>
             </div>
             <div class="Password">
                 <label>Password</label>
-                <input type="password" name="password" id="password" placeholder="Enter password">
+                <input type="password" name="password" id="password" placeholder="Enter password" required>
             </div>
             <div class="ConfirmPassword">
                 <label>Confirm password</label>
-                <input type="password" name="confPassword" id="confPassword" placeholder="Re-enter password">
+                <input type="password" name="confPassword" id="confPassword" placeholder="Re-enter password" required>
             </div>
             <div class="buttons">
-                <input type="button" name="backButton" id="button" value="Back" onclick="window.location.href='Login.html'"></button>
-                <input type="submit" name="signUpButton" id="button" value="Sign Up"></button>
+                <input type="button" name="button" id="backButton" value="Back" onclick="window.location.href='Login.html'"></button>
+                <input type="submit" name="button" id="signupButton" value="Sign Up"></button>
             </div>
 
         </div>

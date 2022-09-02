@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="signupStyle.css"> 
 </head>
 <body>
-    <div class="registerbox">
+    <form>
         <div class="Register">
-            <div class="registerLabel">Sign Up</div>
+            <h1>Sign Up</h1>
             <div class="Email">
                 <label>Email</label>
-                <input type="text" name="email" id="email" placeholder="Enter email">
+                <input type="email" name="email" id="email" placeholder="Enter email">
             </div>
             <div class="Username">
                 <label>Username</label>
@@ -21,18 +21,18 @@
             </div>
             <div class="Password">
                 <label>Password</label>
-                <input type="text" name="password" id="password" placeholder="Enter password">
+                <input type="password" name="password" id="password" placeholder="Enter password">
             </div>
             <div class="ConfirmPassword">
                 <label>Confirm password</label>
-                <input type="text" name="confPassword" id="confPassword" placeholder="Re-enter password">
+                <input type="password" name="confPassword" id="confPassword" placeholder="Re-enter password">
             </div>
             <div class="buttons">
-                <input type="button" name="backButton" id="button" value="back" onclick="window.location.href='Login.html'"></button>
-                <input type="button" name="signUpButton" id="button" value="Sign Up"></button>
+                <input type="button" name="backButton" id="button" value="Back" onclick="window.location.href='Login.html'"></button>
+                <input type="submit" name="signUpButton" id="button" value="Sign Up"></button>
             </div>
 
         </div>
-    </div>
+    </form>
 </body>
 </html>

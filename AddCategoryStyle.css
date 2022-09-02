@@ -1,5 +1,6 @@
 body {
     background-color: rgba(245, 122, 7, 0.5);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .CategoryContainer {
@@ -21,7 +22,6 @@ body {
     color: black;
     font-size: 30px;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .AddCategory {
@@ -32,7 +32,6 @@ body {
 .CategoryNameLabel{  
     color: black;  
     font-size: 17px;
-    font-family: Arial, Helvetica, sans-serif;
     margin: 10px 30%; ;
 } 
 
@@ -51,7 +50,6 @@ body {
 .StatusLabel {
     color: black;  
     font-size: 17px;
-    font-family: Arial, Helvetica, sans-serif;
     margin: 20px 30% 20px; 
 }
 

@@ -5,26 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="signupStyle.css"> 
-    <script src="Signup.js"></script>
+    <link rel="stylesheet" href="signupStyle.css">
+    <script src="Signup.js"></script> 
 <body>
-    <form name ="signupForm" onsubmit="return validateForm()">
+    <form id="signupForm" onsubmit="return validateForm()">
         <div class="Register">
             <h1>Sign Up</h1>
             <div class="Email">
-                <label>Email</label>
+                <label for="email">Email</label>
                 <input type="email" name="email" id="email" placeholder="Enter email" required>
             </div>
             <div class="Username">
-                <label>Username</label>
+                <label for="username">Username</label>
                 <input type="text" name="username" id="username" placeholder="Enter username" required>
             </div>
             <div class="Password">
-                <label>Password</label>
+                <label for="password">Password</label>
                 <input type="password" name="password" id="password" placeholder="Enter password" required>
             </div>
             <div class="ConfirmPassword">
-                <label>Confirm password</label>
+                <label for="confPassword">Confirm password</label>
                 <input type="password" name="confPassword" id="confPassword" placeholder="Re-enter password" required>
             </div>
             <div class="buttons">

@@ -1,9 +1,9 @@
 function validateForm() {
-    const pass1 = document.forms["signupForm"]["password"];
-    const pass2 = document.forms["signupForm"]["confPassword"];
-    
-    if (pass1 != pass2) {
-        alert("Passwords need to be the same");
+    const pwd = document.forms['signupForm']['password'].value;
+    const confPwd = document.forms['signupForm']['confPassword'].value;
+
+    if (pwd != confPwd) {
+        alert("Passwords don't match");
         return false;
     }
 }

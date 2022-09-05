@@ -55,6 +55,10 @@ Label{
     margin-top: 10px;
 }
 
+.inputError {
+    border-color: red;
+}
+
 .Username {
     margin: 20px 29% 20px;
 }

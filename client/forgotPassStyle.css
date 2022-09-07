@@ -1,61 +1,55 @@
 body {
-    background-color: rgba(245, 122, 7, 0.5);
+    /* margin: 5% 0 0 5%; */
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: left;
+    font-size: 18px;
+    font: 500 1rem 'Outfit', sans-serif;
 }
 
-.ForgotPassword {
-    border: 1px solid #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-    width: 900px;
-    overflow: hidden;
-    margin: auto;
-    /* margin: 20 0 0 450px; */
-    padding-top: 40px;
-    padding-bottom: 132px;
-    background-color: white;
-    position: relative;
-}
-
-.forgotLabel {
-    color: black;
-    font-size: 30px;
-    text-align: center;
-}
-
-Label{  
-    color: black;  
-    font-size: 17px;
-}
-
-.Email {
-    margin: 40px 30%;
-}
-
-input[type=text] {
-    width: 350px;  
-    height: 30px;  
-    border: 1px solid black;  
-    border-radius: 10px; 
-    padding-left: 8px; 
-}
-
-input[name=forgotPassButton] {
-    width: 186px;
-    height: 40px;
-    margin: 0px 75%;
-    border: 1px solid black;
-    border-radius: 20px;
-    padding-left: 7px;
-    position: relative;
-    bottom: -90px;
-    color: black;
+.formContainer {
+    width: 60%;
+    max-width: 60%;
+    margin: 1rem;
 }
 
 .instructions {
-    margin: 40px 30%;
+    margin: 1rem 0;
 }
 
-.forgotPassBox {
-    margin-top: 10%;
-    font-family: arial;
+.inputBlock {
+    margin: 1rem 0;
+}
+
+.formInput {
+    display: block;
+    width: 98%;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid;
+}
+
+.buttonContainer {
+    text-align: right;
+}
+
+.formButton {
+    width: 8rem;
+    justify-content: center;
+    text-align: center;
+    padding: 0.25rem;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid blue;
+    color: white;
+    background-color: blue;
+}
+
+.formButton:hover {
+    cursor: pointer;
+}
+
+.formButton:active {
+    transform: scale(0.97);
 }

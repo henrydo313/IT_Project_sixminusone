@@ -50,7 +50,7 @@ body {
 }
 
 .formInput:focus {
-    border-color: rgb(32, 177, 255);
+    border-color: #1454ca;
 }
 
 .checkboxBlock {
@@ -68,12 +68,13 @@ body {
     padding: 0.5rem;
     border-radius: 10px;
     outline: none;
-    border: 1px solid black;
+    border: 1px solid #1454ca;
+    color: white;
+    background-color: #1454ca;
     font-size: 18px;
 }
 
 .formButton:hover {
-    background-color: grey;
     color: white;
     transition: 0.4s;
     transform: scale(1.1);
@@ -92,6 +93,7 @@ body {
 
 a {
     text-decoration: none;
+    color: #1454ca;
 }
 
 a:hover {

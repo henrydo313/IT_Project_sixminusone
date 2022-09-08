@@ -23,6 +23,7 @@ body {
 .formTitle {
     text-align: center;
     margin-bottom: 2rem;
+    font-size: 2.5rem;
 }
 
 .errorMessage {
@@ -37,6 +38,7 @@ body {
 
 .inputBlock {
     margin-bottom: 1rem;
+    font-size: 1rem;
 }
 
 .formInput {
@@ -47,6 +49,7 @@ body {
     outline: none;
     transition: border-color 0.2s;
     border: 2px solid;
+    font-size: 1rem;
 }
 
 .formInput:focus {
@@ -71,7 +74,7 @@ body {
     border: 1px solid #1454ca;
     color: white;
     background-color: #1454ca;
-    font-size: 18px;
+    font-size: 1.25rem;
 }
 
 .formButton:hover {

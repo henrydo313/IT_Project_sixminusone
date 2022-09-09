@@ -1,0 +1,14 @@
+.CategoryLabel{
+    font-size: 40px;
+    margin-left: 130px;
+}
+
+.Categories {
+    margin:0px 90px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.CategoryImage{
+    padding: 10px 15px
+}

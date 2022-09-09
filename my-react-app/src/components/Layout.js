@@ -1,4 +1,5 @@
 import Nav from './Nav';
+import BottomBar from './BottomBar';
 
 export default function Layout({ children }) {
     return (
@@ -7,6 +8,7 @@ export default function Layout({ children }) {
                 <Nav />
             </header>
             <section>{ children }</section>
+            <BottomBar />
         </>
     )
 }

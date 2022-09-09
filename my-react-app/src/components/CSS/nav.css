@@ -4,6 +4,10 @@ body{
     font-size: 20px;
 }
 
+.name {
+    margin-left: 30px;
+}
+
 .nav {
     display: flex;
     justify-content: space-between;
@@ -39,5 +43,6 @@ body{
 }
 
 .loginButton{
+    margin-right: 30px;
     padding: 10px 15px
 }

@@ -8,7 +8,7 @@ export default function Nav() {
     const navigate = useNavigate();
     return ( <nav>
         <div className='nav'>
-            <h1 onClick={()=>navigate("/")}>Library Management System</h1>
+            <h1 className="name" onClick={()=>navigate("/")}>Library Management System</h1>
             <ul className="links"> 
                 <li className="items">Popular</li>
                 <li className="items">Latest</li>

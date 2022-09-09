@@ -19,6 +19,6 @@ export default function Home() {
             <img className='CategoryImage' src={Health} alt='Health'/>
             <img className='CategoryImage' src={Law} alt='Law'/>
         </div>
-        <h1>Popular</h1>
+        <h1 className='PopularLabel'>Popular</h1>
     </Layout>
 }

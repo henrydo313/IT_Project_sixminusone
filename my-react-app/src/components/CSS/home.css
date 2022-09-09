@@ -3,6 +3,11 @@
     margin-left: 130px;
 }
 
+.PopularLabel {
+    font-size: 40px;
+    margin-left: 130px;
+}
+
 .Categories {
     margin:0px 90px 0px;
     display: flex;

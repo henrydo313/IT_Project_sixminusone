@@ -1,0 +1,41 @@
+body {
+    margin: auto;
+    width: 60%;
+    font-size: 18px;
+    font: 500 1rem "Outfit", sans-serif;
+}
+
+.info {
+    font-size: 14px;
+}
+
+.Container {
+    background-color: #f2f2f2;
+}
+
+.buttonContainer {
+    text-align: right;
+}
+
+.Button {
+    width: 7rem;
+    justify-content: center;
+    text-align: center;
+    padding: 0.25rem;
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid #1454ca;
+    color: white;
+    background-color: #1454ca;
+    font-size: 1.25rem;
+    position: relative;
+    top: 35px;
+}
+
+.Button:hover {
+    cursor: pointer;
+}
+
+.Button:active {
+    transform: scale(0.97);
+}

@@ -14,7 +14,7 @@ export default function Nav() {
                 <li className="items">Latest</li>
                 <li className="items">Books</li>
             </ul>
-            <input type='text' id='searchBox' placeholder='Search for book'></input>
+            <input type='text' id='searchBox' placeholder='Search for book'/>
             <ul className="login">
                 <li className="loginButton" onClick={()=>navigate("/login")}>Login</li>
             </ul>

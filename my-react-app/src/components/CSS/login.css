@@ -1,11 +1,16 @@
 body {
     margin: 0;
     /* height: 100vh; */
+    /* display: flex; */
+
+    font-size: 18px;
+    font: 500 1rem 'Outfit', sans-serif;
+}
+
+.formBody {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
-    font: 500 1rem 'Outfit', sans-serif;
 }
 
 .formContainer{

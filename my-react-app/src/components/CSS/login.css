@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    /* height: 100vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font: 500 1rem 'Outfit', sans-serif;
+}
+
+.formContainer{
+    width: 400px;
+    max-width: 400px;
+    margin: 1rem;
+    padding: 2rem;
+    background: rgb(242,242,242,1);
+}
+
+.hiddenForm {
+    display: none;
+}
+
+.formTitle {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.errorMessage {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: red;
+}
+
+.hiddenError {
+    display: none;
+}
+
+.inputBlock {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.formInput {
+    display: block;
+    width: 93%;
+    padding: 0.75rem;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.2s;
+    border: 2px solid;
+    font-size: 1rem;
+}
+
+.formInput:focus {
+    border-color: #1454ca;
+}
+
+.checkboxBlock {
+    margin-bottom: 2rem;
+}
+
+.buttonContainer {
+    text-align: center;
+}
+
+.formButton {
+    width: 50%;
+    justify-content: center;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #1454ca;
+    color: white;
+    background-color: #1454ca;
+    font-size: 1.25rem;
+}
+
+.formButton:hover {
+    color: white;
+    transition: 0.4s;
+    transform: scale(1.1);
+    cursor: pointer;
+    
+}
+
+.formButton:active {
+    transform: scale(1);
+}
+
+.linkContainer {
+    text-align: right;
+    margin-top: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: #1454ca;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.switchForm {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.switchForm > p {
+    margin-top: 2rem;
+}
+
+#passwordConfirmBlock {
+    margin-bottom: 3.5rem;
+}

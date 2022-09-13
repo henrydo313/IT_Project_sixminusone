@@ -31,7 +31,7 @@
             </div>
 
             <div class="buttonContainer">
-                <input type="button" class="formButton" id="loginButton" value="Login">
+                <input type="submit" class="formButton" id="loginButton" value="Login">
             </div>
             <div class="linkContainer">
                 <a href="ForgotPass.html" id="forgotPasswordLink">Forgot password?</a>
@@ -45,8 +45,7 @@
         </form>
 
 
-        <form action="" class="form hiddenForm" id="signup">
-            <form action="" class="form" id="login">
+        <form action="" class="form hiddenForm" id="signup" onsubmit="return validateForm()">
             <h1 class="formTitle">Sign Up</h1>
 
             <div class="inputBlock" id="emailBlock">
@@ -70,7 +69,7 @@
             </div>
 
             <div class="buttonContainer">
-                <input type="button" class="formButton" id="signupButtom" value="Sign Up">
+                <input type="submit" class="formButton" id="signupButtom" value="Sign Up">
             </div>
 
             <div class="switchForm">

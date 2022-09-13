@@ -1,6 +1,6 @@
 function validateForm() {
-    const pwd = document.forms['signupForm']['password'].value;
-    const confPwd = document.forms['signupForm']['confPassword'].value;
+    const pwd = document.forms['signupForm']['passwordInput'].value;
+    const confPwd = document.forms['signupForm']['passwordConfirmInput'].value;
 
     if (pwd != confPwd) {
         alert("Passwords don't match");

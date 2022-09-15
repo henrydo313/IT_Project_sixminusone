@@ -1,29 +1,41 @@
+import React from "react";
 import Layout from "./Layout";
+import { useNavigate } from 'react-router-dom';
 import "./CSS/login.css"
-
-
-document.addEventListener("DOMContentLoaded", () => {
-    const loginForm = document.querySelector("#login");
-    const signupForm = document.querySelector("#signup");
-
-    document.querySelector(".switchToSignup").addEventListener("click", e => {
-        e.preventDefault();
-        loginForm.classList.add("hiddenForm");
-        signupForm.classList.remove("hiddenForm");
-    })
-
-    document.querySelector(".switchToLogin").addEventListener("click", e => {
-        e.preventDefault();
-        loginForm.classList.remove("hiddenForm");
-        signupForm.classList.add("hiddenForm");
-    })
-})
 
 
 export default function Login() {
 
-    function something() {}
-    
+    function switchToLoginForm() {
+        document.querySelector("#signup").classList.remove("hiddenForm");
+        document.querySelector("#login").classList.add("hiddenForm");
+    }
+
+    function switchToSignupForm() {
+        document.querySelector("#signup").classList.add("hiddenForm");
+        document.querySelector("#login").classList.remove("hiddenForm");
+    }
+
+    function validateLogin() {
+        // if() {
+        //     document.querySelector("#errorMessage").classList.remove("hiddenError");
+        //     return false;
+        // }
+    }
+
+    function validateSignup() {
+        const pwd = document.forms['signup']['passwordInput'].value;
+        const confPwd = document.forms['signup']['passwordConfirmInput'].value;
+
+        if (pwd !== confPwd) {
+            alert("Passwords don't match");
+            return false;
+        }
+    }
+
+    // function to check if checkbox is checked
+
+    const navigate = useNavigate();
     return (
         <Layout>
             <body>
@@ -49,16 +61,16 @@ export default function Login() {
                             </div>
 
                             <div className="buttonContainer">
-                                <input type="submit" className="formButton" id="loginButton" value="Login"/>
+                                <input type="submit" className="formButton" id="loginButton" value="Login" onClick={() => validateLogin()}/>
                             </div>
                             <div className="linkContainer">
-                                <a href="ForgotPass.html" id="forgotPasswordLink">Forgot password?</a>
+                                <a href="" id="forgotPasswordLink" onClick={() => navigate("/forgot password")}>Forgot password?</a>
                             </div>
 
                             <div className="switchForm">
                                 <hr></hr>
                                 <p>Don't have an account?</p>
-                                <input type="button" className="formButton switchToSignup" value="Sign Up" onClick={() => something()}/>
+                                <input type="button" className="formButton switchToSignup" value="Sign Up" onClick={() => switchToLoginForm()}/>
                             </div>
                         </form>
 
@@ -68,32 +80,32 @@ export default function Login() {
 
                             <div className="inputBlock" id="emailBlock">
                                 <label for="emailInput">Email</label>
-                                <input type="email" className="formInput" id="emailInput" placeholder="Enter email" autofocus/>
+                                <input type="email" className="formInput" id="emailInput" placeholder="Enter email" autofocus required/>
                             </div>
 
                             <div className="inputBlock" id="usernameBlock">
                                 <label for="usernameInput">Username</label>
-                                <input type="text" className="formInput" id="usernameInput" placeholder="Enter username"/>
+                                <input type="text" className="formInput" id="usernameInput" placeholder="Enter username" required/>
                             </div>
 
                             <div className="inputBlock" id="passwordBlock">
                                 <label for="passwordInput">Password</label>
-                                <input type="password" className="formInput" id="passwordInput" placeholder="Enter password"/>
+                                <input type="password" className="formInput" id="passwordInput" placeholder="Enter password" required/>
                             </div>
 
                             <div className="inputBlock" id="passwordConfirmBlock">
                                 <label for="passwordInput">Confirm password</label>
-                                <input type="password" className="formInput" id="passwordConfirmInput" placeholder="Re-enter password"/>
+                                <input type="password" className="formInput" id="passwordConfirmInput" placeholder="Re-enter password" required/>
                             </div>
 
                             <div className="buttonContainer">
-                                <input type="submit" className="formButton" id="signupButtom" value="Sign Up"/>
+                                <input type="submit" className="formButton" id="signupButtom" value="Sign Up" onClick={() => validateSignup()}/>
                             </div>
 
                             <div className="switchForm">
                                 <hr></hr>
                                 <p>Already have an account?</p>
-                                <input type="button" className="formButton switchToLogin" value="Login"/>
+                                <input type="button" className="formButton switchToLogin" value="Login" onClick={() => switchToSignupForm()}/>
                             </div>
                         </form>
                     </div>

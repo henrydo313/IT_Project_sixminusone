@@ -8,7 +8,9 @@ export default function Layout({ children }) {
                 <Nav />
             </header>
             <section>{ children }</section>
-            <BottomBar />
+            <footer>
+                <BottomBar />
+            </footer> 
         </>
     )
 }

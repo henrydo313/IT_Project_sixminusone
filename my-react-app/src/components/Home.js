@@ -7,21 +7,21 @@ import Literature from './Images/CategoryImages/LaF.png';
 import Science from './Images/CategoryImages/SNaM.png';
 import Health from './Images/CategoryImages/HFaN.png';
 import Law from './Images/CategoryImages/Law.png'
-import './CSS/home.css';
+import style from './CSS/home.module.css';
 
 export default function Home() {
     return <Layout>
-        <h1 className='CategoryLabel'>Categories</h1>
-        <div className='Categories'>
-            <img className='CategoryImage' src={BusinessAndEcon} alt='BusinessAndEcon'/>
-            <img className='CategoryImage' src={Education} alt='Education'/>
-            <img className='CategoryImage' src={Literature} alt='Literature'/>
-            <img className='CategoryImage' src={Science} alt='Science'/>
-            <img className='CategoryImage' src={Health} alt='Health'/>
-            <img className='CategoryImage' src={Law} alt='Law'/>
+        <h1 className={style.CategoryLabel}>Categories</h1>
+        <div className={style.Categories}>
+            <img className={style.CategoryImage} src={BusinessAndEcon} alt='BusinessAndEcon'/>
+            <img className={style.CategoryImage} src={Education} alt='Education'/>
+            <img className={style.CategoryImage} src={Literature} alt='Literature'/>
+            <img className={style.CategoryImage} src={Science} alt='Science'/>
+            <img className={style.CategoryImage} src={Health} alt='Health'/>
+            <img className={style.CategoryImage} src={Law} alt='Law'/>
         </div>
-        <h1 className='PopularLabel'>Popular</h1>
-        <div className='Books'>
+        <h1 className={style.PopularLabel}>Popular</h1>
+        <div className={style.Books}>
             <Books />
         </div>
     </Layout>

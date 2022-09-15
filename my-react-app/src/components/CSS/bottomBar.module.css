@@ -5,12 +5,22 @@ body{
 }
 
 .bottomBar {
-    width: 100%;
     display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: flex-end;
 }
 
 .bottomLinks {
+    padding: 0px;
+    margin: 0px;
     list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.bottomItems:hover {
+    cursor: pointer;
+}
+
+

@@ -18,7 +18,7 @@ export default function Login() {
 
     function validateLogin() {
         // if() {
-        //     document.querySelector("#errorMessage").classList.remove("hiddenError");
+        //     document.querySelector("#errorMessage").classList.remove({styles.hiddenError});
         //     return false;
         // }
     }

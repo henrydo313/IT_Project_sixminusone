@@ -1,8 +1,5 @@
 body {
     margin: 0;
-    /* height: 100vh; */
-    /* display: flex; */
-
     font-size: 18px;
     font: 500 1rem 'Outfit', sans-serif;
 }
@@ -99,13 +96,14 @@ body {
     margin-top: 1rem;
 }
 
-a {
+#forgotPasswordLink {
     text-decoration: none;
     color: #1454ca;
 }
 
-a:hover {
+#forgotPasswordLink:hover {
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .switchForm {

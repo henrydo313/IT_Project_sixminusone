@@ -1,24 +1,24 @@
 import Layout from './Layout';
-// import "./CSS/forgotPassword.css";
+import styles from "./CSS/forgotPassword.module.css";
 
 export default function ForgotPassword() {
     return (
         <Layout>
-            <div class="formBody">
-                <div class="formContainer">
-                    <form action="" class="form" id="forgotPass">
-                        <h1>Forgot Password</h1>
-                        <div class="instructions">
+            <div className={styles.formBody}>
+                <div className={styles.formContainer}>
+                    <form action="" className="form" id="forgotPass">
+                        <div className={styles.formTitle}>Forgot Password</div>
+                        <div className={styles.instructions}>
                             Please enter the email associated with your account 
                             and we'll send an email with instructions to reset your password.
                         </div>
             
-                        <div class="inputBlock">
-                            <input type="email" id="emailInput" class="formInput" placeholder="Email address"/>
+                        <div className={styles.inputBlock}>
+                            <input type="email" className={styles.formInput + ' ' + styles.emailInput} placeholder="Email address"/>
                         </div>
             
-                        <div class="buttonContainer">
-                            <input type="button" class="formButton" id="sendEmailButton" value="Send email"/>
+                        <div className={styles.buttonContainer}>
+                            <input type="button" className={styles.formButton} id="sendEmailButton" value="Send email"/>
                         </div>
                     </form>
                 </div>

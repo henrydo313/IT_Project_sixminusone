@@ -6,7 +6,9 @@ import { useNavigate } from 'react-router-dom';
 
 export default function Nav() {
     const navigate = useNavigate();
-    return ( <nav>
+    return ( 
+    <nav>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet"/>
         <div className={style.nav}>
             <h1 className={style.name} onClick={()=>navigate("/")}>Library Management System</h1>
             <ul className={style.links}> 

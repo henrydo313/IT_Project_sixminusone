@@ -41,7 +41,7 @@ export default function Login() {
 
                 <div className={styles.formBody}>
                     <div className={styles.formContainer}>
-                        <form action="" className="form" id="login">
+                        <form action="" className={styles.form} id="login">
                             <h1 className={styles.formTitle}>Login</h1>
                             <div className={styles.errorMessage + ' ' + styles.hiddenError}>Incorrect username/password.</div>
 

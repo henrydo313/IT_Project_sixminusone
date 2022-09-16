@@ -15,11 +15,13 @@ export default function ForgotPassword() {
                         </div>
             
                         <div className={styles.inputBlock}>
-                            <input type="email" className={styles.formInput + ' ' + styles.emailInput} placeholder="Email address"/>
+                            <input type="email" className={styles.formInput + ' ' + styles.emailInput} 
+                            placeholder="Email address" autoFocus/>
                         </div>
             
                         <div className={styles.buttonContainer}>
-                            <input type="button" className={styles.formButton} id="sendEmailButton" value="Send email"/>
+                            <input type="button" className={styles.formButton} 
+                            id="sendEmailButton" value="Send email"/>
                         </div>
                     </form>
                 </div>

@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import Book from "./Book";
-
-function BookPage({Books}) {
+import style from "./CSS/bookContainer.module.css"
+export default function BookContainer({Books}) {
     return (
-        <ul className="BookPage-Items">
+        <ul className={style.BookContainerItems}>
             {Books.map(Books=> 
-                <li key={Books.id} className="BookPage-item">
+                <li key={Books.id} className={style.BookContainerItem}>
                     <Book books={Books}/>
                 </li>    
             )}
@@ -14,8 +14,6 @@ function BookPage({Books}) {
     );
 }
 
-BookPage.propTypes = {
+BookContainer.propTypes = {
     Books: PropTypes.array.isRequired
 };
-
-export default BookPage;

@@ -1,0 +1,18 @@
+.BookContainerItems {
+    display: flex;
+    background-color: lightcyan;
+    padding-left: 5rem;
+    
+}
+
+.BookContainerItem::-webkit-scrollbar {
+    display: none;
+}
+
+.BookContainerItem {
+    list-style: none;
+}
+
+.BookContainerItem:hover {
+    transform: scale(1.05);
+}

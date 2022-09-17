@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout from './Layout';
 import {books} from './StaticData/BooksData';
-import BookPage from './BookPage';
 import BusinessAndEcon from './Images/CategoryImages/BaE.png';
 import Education from './Images/CategoryImages/ESaT.png';
 import Literature from './Images/CategoryImages/LaF.png';
@@ -9,6 +8,7 @@ import Science from './Images/CategoryImages/SNaM.png';
 import Health from './Images/CategoryImages/HFaN.png';
 import Law from './Images/CategoryImages/Law.png'
 import style from './CSS/home.module.css';
+import BookContainer from './BookContainer';
 
 export default function Home() {
     return <Layout>
@@ -23,7 +23,7 @@ export default function Home() {
         </div>
         <h1 className={style.PopularLabel}>Popular</h1>
         <div className={style.Books}>
-            <BookPage Books={books}/>
+            <BookContainer Books={books}/>
         </div>
     </Layout>
 }

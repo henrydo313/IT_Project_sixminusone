@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from './Layout';
-import Books from './Book';
+import {books} from './StaticData/BooksData';
+import BookPage from './BookPage';
 import BusinessAndEcon from './Images/CategoryImages/BaE.png';
 import Education from './Images/CategoryImages/ESaT.png';
 import Literature from './Images/CategoryImages/LaF.png';
@@ -22,7 +23,7 @@ export default function Home() {
         </div>
         <h1 className={style.PopularLabel}>Popular</h1>
         <div className={style.Books}>
-            <Books />
+            <BookPage Books={books}/>
         </div>
     </Layout>
 }

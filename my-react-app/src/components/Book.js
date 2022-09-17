@@ -1,12 +1,18 @@
 import React from 'react';
 import style from './CSS/book.module.css';
-import Book1 from './Images/BookCover/BookCover.jpg';
+import PropTypes from 'prop-types';
 
-export default function Book() {
+const Book = ({books}) => {
     return (
         <div className={style.BookContainer}>
-            <img className={style.Book} src={Book1} alt='Book1'/>
-            <div className={style.Title}>title</div>
+            <img className={style.Book} src={books.image} alt='Book1'/>
+            <div className={style.Title}>{books.name}</div>
         </div>
     );
 }
+
+Book.propType = {
+    books: PropTypes.object.isRequired,
+}
+
+export default Book;

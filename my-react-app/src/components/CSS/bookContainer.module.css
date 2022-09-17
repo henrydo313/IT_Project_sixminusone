@@ -2,12 +2,16 @@
     display: flex;
     background-color: lightcyan;
     padding-left: 5rem;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-x: scroll; 
+    overflow-y: hidden;
     
 }
 
-.BookContainerItem::-webkit-scrollbar {
+/* .BookContainerItems::-webkit-scrollbar {
     display: none;
-}
+} */
 
 .BookContainerItem {
     list-style: none;

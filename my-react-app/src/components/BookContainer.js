@@ -4,21 +4,34 @@ import Book from "./Book";
 import style from "./CSS/bookContainer.module.css";
 import leftArrow from "./Images/leftarrow.png";
 import rightArrow from "./Images/rightarrow.png";
-import { useHorizontalScroll } from "./scripts/HorizontalScroll";
+import { useRef } from "react";
 
 export default function BookContainer({Books}) {
-    const horizontalScroll = useHorizontalScroll();
+    const container = useRef();
+    const scroll = (scrollStrength) => {
+        container.current.scrollLeft += scrollStrength;
+    }
+
+    const scrollWheel = (e) => {
+        const scrollStrength = 500;
+        if(e.deltaY > 0) {
+            container.current.scrollLeft += scrollStrength
+        }
+        else {
+            container.current.scrollLeft -= scrollStrength
+        }
+    }
     return (
         <div className={style.BooksAndArrows}>
-            <img className={style.Arrows} id="leftArrow" src={leftArrow} alt="leftArrow"/>
-            <ul className={style.BookContainerItems} ref={horizontalScroll}>
+            <img className={style.Arrows} src={leftArrow} alt="leftArrow" onClick={() => scroll(500)}/>
+            <ul className={style.BookContainerItems} ref={container} onWheel={e => scrollWheel(e)}>
                 {Books.map(Books=> 
                     <li key={Books.id} className={style.BookContainerItem}>
                         <Book books={Books}/>
                     </li>    
                 )}
             </ul>
-            <img className={style.Arrows} id="leftArrow" src={rightArrow} alt="rightArrow"/>
+            <img className={style.Arrows} src={rightArrow} alt="rightArrow" onClick={() => scroll(-500)}/>
         </div>
     );
 }

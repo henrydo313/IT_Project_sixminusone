@@ -9,15 +9,17 @@
     overflow-x: scroll; 
     overflow-y: hidden;
     width: 80%;
-    margin: 10%;
+    margin-left: 10%;
 }
 
 
-/* .BookContainerItems::-webkit-scrollbar {
+.BookContainerItems::-webkit-scrollbar {
     display: none;
-} */
+}
 
 .BookContainerItem {
+    display: flex;
+    justify-content: space-evenly;
     list-style: none;
 }
 

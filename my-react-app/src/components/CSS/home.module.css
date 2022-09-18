@@ -27,4 +27,6 @@
 .Books {
     display: flex;
     margin: 0 10% 0;
+    width: 500px;
+    justify-content: space-between;
 }

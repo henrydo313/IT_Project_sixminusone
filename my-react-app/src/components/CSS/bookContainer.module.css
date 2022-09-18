@@ -1,4 +1,6 @@
 .BookContainerItems {
+    margin: 0;
+    padding: 0;
     display: flex;
     background-color: lightcyan;
     padding-left: 5rem;
@@ -6,9 +8,10 @@
     scrollbar-width: none;
     overflow-x: scroll; 
     overflow-y: hidden;
-    width: 85%;
-    
+    width: 80%;
+    margin: 10%;
 }
+
 
 /* .BookContainerItems::-webkit-scrollbar {
     display: none;

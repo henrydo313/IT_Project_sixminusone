@@ -22,8 +22,7 @@ export default function Home() {
             <img className={style.CategoryImage} src={Law} alt='Law'/>
         </div>
         <h1 className={style.PopularLabel}>Popular</h1>
-        <div className={style.Books}>
-            <BookContainer Books={books}/>
-        </div>
+        <BookContainer Books={books}/>
+        
     </Layout>
 }

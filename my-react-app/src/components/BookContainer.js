@@ -9,7 +9,7 @@ import { useRef } from "react";
 export default function BookContainer({Books}) {
     const container = useRef();
     const scroll = (scrollStrength) => {
-        container.current.scrollLeft += scrollStrength;
+        container.current.scrollLeft -= scrollStrength;
     }
 
     const scrollWheel = (e) => {

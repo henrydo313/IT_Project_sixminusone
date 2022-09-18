@@ -1,15 +1,12 @@
 .BookContainerItems {
-    margin: 0;
-    padding: 0;
     display: flex;
     background-color: lightcyan;
-    padding-left: 5rem;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    overflow-x: scroll; 
+    overflow-x: auto; 
     overflow-y: hidden;
-    width: 80%;
-    margin-left: 10%;
+    width: 80vw;
+    height: auto;
 }
 
 
@@ -21,8 +18,21 @@
     display: flex;
     justify-content: space-evenly;
     list-style: none;
+
 }
 
 .BookContainerItem:hover {
     transform: scale(1.05);
+
+}
+
+.BooksAndArrows {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.Arrows {
+    width: 3vw;
+    height: 5vw;
 }

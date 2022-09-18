@@ -12,8 +12,9 @@
 .Books {
     margin: 0px 70px 0px;
 }
+
 .Book {
     display: flex;
-    width: 300px;
+    width: 12vw;
     height: auto;
 }

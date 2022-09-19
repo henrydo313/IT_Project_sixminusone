@@ -4,6 +4,8 @@ import AddBook from './components/AddBook';
 import Home from './components/Home';
 import Login from './components/Login';
 import ForgotPassword from './components/ForgotPassword';
+import AllocateBook from './components/AllocateBook';
+import ReturnBook from './components/ReturnBook';
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
         <Route path="/login" element={<Login />}/>
         <Route path="/addBook" element={<AddBook />} />
         <Route path="/forgotPassword" element={<ForgotPassword />} />
+        <Route path="/manageBooks/allocateBook" element={<AllocateBook />} />
+        <Route path="/manageBooks/returnBook" element={<ReturnBook />} />
       </Routes>
     </div>
   );

@@ -78,6 +78,11 @@ export default function Login() {
                         <form action="" className={styles.form + ' ' + styles.hiddenForm} id="signup">
                             <h1 className={styles.formTitle}>Sign Up</h1>
 
+                            <div className={styles.inputBlock} id="nameBlock">
+                                <label>Full name</label>
+                                <input type="text" className={styles.formInput + ' ' + styles.nameInput} placeholder="Enter name" autofocus required/>
+                            </div>
+
                             <div className={styles.inputBlock} id="emailBlock">
                                 <label>Email</label>
                                 <input type="email" className={styles.formInput + ' ' + styles.emailInput} placeholder="Enter email" autofocus required/>

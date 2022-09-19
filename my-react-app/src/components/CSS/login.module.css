@@ -24,6 +24,7 @@ body {
     background: rgb(242,242,242,1);
     padding: 2rem;
     border-radius: 5px;
+    border: 1.5px solid black;
 }
 
 .hiddenForm {
@@ -90,8 +91,7 @@ body {
 .formButton:hover {
     transition: 0.4s;
     transform: scale(1.1);
-    cursor: pointer;
-    
+    cursor: pointer; 
 }
 
 .formButton:active {

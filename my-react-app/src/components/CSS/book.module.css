@@ -1,13 +1,12 @@
 .BookContainer {
     display: flex;
     flex-direction: column;
-    background-color: #F5F5F5;
-    padding: 30px 10px 20px;
+    padding: 30px 10px 50px;
     margin: 10px 20px 10px;
     align-items: center;
     width: 100%;
     height: auto;
-    justify-content: space-between;
+    
 }
 .Books {
     margin: 0px 70px 0px;
@@ -17,4 +16,11 @@
     display: flex;
     width: 12vw;
     height: auto;
+}
+
+.Title {
+    width: 12vw;
+    font-size: 20px;
+    overflow-wrap: break-word;
+    text-align: center;
 }

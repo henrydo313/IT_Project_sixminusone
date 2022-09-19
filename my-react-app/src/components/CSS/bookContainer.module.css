@@ -1,6 +1,5 @@
 .BookContainerItems {
     display: flex;
-    background-color: lightcyan;
     -ms-overflow-style: none;
     scrollbar-width: none;
     overflow-x: auto; 
@@ -24,7 +23,6 @@
 
 .BookContainerItem:hover {
     transform: scale(1.05);
-
 }
 
 .BooksAndArrows {
@@ -36,4 +34,12 @@
 .Arrows {
     width: 3vw;
     height: 5vw;
+}
+
+#leftArrow:active{
+    transform: scale(0.90);
+}
+
+#rightArrow:active{
+    transform: scale(0.90);
 }

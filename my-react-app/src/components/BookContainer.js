@@ -15,11 +15,14 @@ export default function BookContainer({Books}) {
     const scrollWheel = (e) => {
         const scrollStrength = 500;
         if(e.deltaY > 0) {
-            container.current.scrollLeft += scrollStrength
+            container.current.scrollLeft += scrollStrength;
+         e.stopPropagation();
         }
         else {
-            container.current.scrollLeft -= scrollStrength
+            container.current.scrollLeft -= scrollStrength;
+            e.stopPropagation();
         }
+  
     }
     return (
         <div className={style.BooksAndArrows}>

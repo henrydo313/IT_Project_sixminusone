@@ -8,7 +8,7 @@ let books = [
         alttext: "book0"
     },
     {
-        name: "erwtjkerjgkfdhkgfkjd,gfhjghlksfdjhglfdksjhgfdlkjghld",
+        name: "erwtjkerjgkfdhkgfkjd,gfhjghlks",
         id: 1,
         image: book1 ,
         alttext: "book1"
@@ -38,31 +38,31 @@ let books = [
         alttext: "book5"
     },
     {
-        name: "dsfkjhakjsdhflajdsfhjkldslfha lkdsjhfhlakdsjhfladshjklfhklj adshjlkfhjkldsahjkffhkljadshjklfhj",
+        name: "dsfkjhakjsdhflajdsfhjkldslfha lkdsjhfhlakdsjj",
         id: 6,
         image: book1 ,
         alttext: "book6"
     },
     {
-        name: "dsfkjhakjsdhflajdsfhjkldslfha lkdsjhfhlakdsjhfladshjklfhklj adshjlkfhjkldsahjkffhkljadshjklfhj",
+        name: "dsfkjhakjsdhflajdsfhjkldslfha lkdsjhfhlak",
         id: 7,
         image: book1 ,
         alttext: "book7"
     },
     {
-        name: "dsfkjhakjsdhflajdsfhjkldslfha lkdsjhfhlakdsjhfladshjklfhklj adshjlkfhjkldsahjkffhkljadshjklfhj",
+        name: "dsfkjhakjsdhflajdsfhjkldslfha lkdsjhfhlakdsjh",
         id: 8,
         image: book1 ,
         alttext: "book8"
     },
     {
-        name: "asfdjhdsijfhdskj uisfhkjhsjadhfcoisaj  joashdijsajd sajsahdjshaijo uasdsadhui sahuid uisahdui auiduisadhuisa huidsa huid huisad huias uisahd",
+        name: "asfdjhdsijfhdskj uisfhkjhsjadhfcois",
         id: 9,
         image: book1 ,
         alttext: "book9"
     },
     {
-        name: "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut ali",
+        name: "Lorem ipsum dolor sit amet",
         id: 10,
         image: book1 ,
         alttext: "book10"

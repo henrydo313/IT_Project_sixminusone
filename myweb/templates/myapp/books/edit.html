@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h2>Book List Management</h2>
+
+        <a href="{% url 'indexbooks' %}">Browse book info</a>
+        <a href="{% url 'addbooks' %}">Add book info</a>
+        <hr/>
+
+
+        <h3>Add Book Info</h3>
+
+        <form action="{% url 'updatebooks' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type ="hidden" name="id" value = {{book.id}}>
+            <table width="280" border="0">
+               <tr>
+                 <td>Name: </td>
+                 <td><input type="text" name="name" value="{{book.name}}"/></td>
+               </tr>
+               <tr>
+                 <td>ISBN: </td>
+                 <td><input type="text" name="ISBN" value="{{book.ISBN}}"/></td>
+               </tr>
+               <tr>
+                 <td>Genre: </td>
+                 <td><input type="text" name="genre" value="{{book.genre}}"/></td>
+               </tr>
+               <tr>
+                <td>Author: </td>
+                <td><input type="text" name="author" value="{{book.author}}"/></td>
+              </tr>
+
+              
+               <tr>
+                 <td colspan="2" align="center">
+                    <input type="submit" value="Update"/>
+                    <input type="reset" value="Reset"/>
+                 </td>
+               </tr>
+            </table>
+            </form>
+
+        
+          
+             
+        
+    </center>
+    
+</body>
+</html>

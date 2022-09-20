@@ -4,12 +4,11 @@ import { useNavigate } from 'react-router-dom';
 
 export default function BottomBar() {
     const navigate = useNavigate();
-    return ( <nav>
+    return (
         <div className={style.bottomBar}>
             <ul className={style.bottomLinks}>
-                <li className={style.bottomItems} onClick={() => navigate("/")}>About Us</li>
+                <li className={style.bottomItems} onClick={() => navigate("/aboutUs")}>About Us</li>
             </ul>
         </div>
-    </nav>
     )
 }

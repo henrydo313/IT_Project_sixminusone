@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        function doDel(uu){
+            if(confirm("确定要删除吗？")){
+                
+                window.location=uu;
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <center>
+        <h2>Book List Management</h2>
+
+        <a href="{% url 'indexbooks' %}">Browse book info</a>
+        <a href="{% url 'addbooks' %}">Add book info</a>
+        <hr/>
+
+
+        <h3>Browse Book Info</h3>
+
+        <table width ="800" border ="1">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>ISBN</th>
+                <th>Genre</th>
+                <th>Author</th>
+                
+                <th>Time Added</th>
+                <th>Manage</th>
+                
+            </tr>
+            {% for book in booklist %}
+                <tr>
+                    <td>{{book.id}}</td>
+                    <td>{{book.name}}</td>
+                    <td>{{book.ISBN}}</td>
+                    <td>{{book.genre}}</td>
+                    <td>{{book.author}}</td>
+                    
+                    <td>{{book.addtime}}</td>
+                    <td>
+                        <a href="{% url 'editbooks' book.id %}">Edit</a>
+                        <a href="javascript:doDel('{% url 'delbooks' book.id %}');">Delete</a></td>
+                </tr>
+            {% endfor %}
+             
+        </table>
+    </center>
+    
+</body>
+</html>

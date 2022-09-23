@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const Book = ({books}) => {
+    const navigate = useNavigate();
     return (
         <Link to={`/book/${books.id}`}>
             <div className={style.BookContainer} >

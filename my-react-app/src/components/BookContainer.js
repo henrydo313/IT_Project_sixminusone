@@ -5,11 +5,14 @@ import style from "./CSS/bookContainer.module.css";
 import leftArrow from "./Images/leftarrow.png";
 import rightArrow from "./Images/rightarrow.png";
 
+
 export default function BookContainer({Books}) {
     const container = useRef();
     const scroll = (scrollStrength) => {
         container.current.scrollLeft -= scrollStrength;
     }
+
+    
 
     return (
         <div className={style.BooksAndArrows}>

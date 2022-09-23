@@ -64,7 +64,7 @@ export default function Login() {
                                 <input type="submit" className={styles.formButton} id="loginButton" value="Login" onClick={() => validateLogin()}/>
                             </div>
                             <div className={styles.linkContainer}>
-                                <div id={styles.forgotPasswordLink} onClick={() => navigate("/forgotPassword")}>Forgot password?</div>
+                                <div id={styles.forgotPasswordLink} onClick={() => navigate("/forgot-password")}>Forgot password?</div>
                             </div>
 
                             <div className={styles.switchForm}>
@@ -80,12 +80,12 @@ export default function Login() {
 
                             <div className={styles.inputBlock} id="nameBlock">
                                 <label>Full name</label>
-                                <input type="text" className={styles.formInput + ' ' + styles.nameInput} placeholder="Enter name" autofocus required/>
+                                <input type="text" className={styles.formInput + ' ' + styles.nameInput} placeholder="Enter name" required/>
                             </div>
 
                             <div className={styles.inputBlock} id="emailBlock">
                                 <label>Email</label>
-                                <input type="email" className={styles.formInput + ' ' + styles.emailInput} placeholder="Enter email" autofocus required/>
+                                <input type="email" className={styles.formInput + ' ' + styles.emailInput} placeholder="Enter email" required/>
                             </div>
 
                             <div className={styles.inputBlock} id="usernameBlock">

@@ -11,9 +11,6 @@ export default function BookContainer({Books}) {
     const scroll = (scrollStrength) => {
         container.current.scrollLeft -= scrollStrength;
     }
-
-    
-
     return (
         <div className={style.BooksAndArrows}>
             <img className={style.Arrows} id={style.leftArrow} src={leftArrow} alt="leftArrow" onClick={() => scroll(500)}/>

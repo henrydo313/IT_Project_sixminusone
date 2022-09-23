@@ -19,8 +19,13 @@
 }
 
 .Title {
-    width: 12vw;
+    width: 10vw;
     font-size: 20px;
     overflow-wrap: break-word;
     text-align: center;
+    text-decoration: none;
+    color: black;
+}
+a {
+    text-decoration: none;
 }

@@ -2,7 +2,8 @@ import React from 'react';
 import Layout from './Layout';
 import styles from "./CSS/allocate-return.module.css";
 import bookCover from "./Images/BookCover/BookCover.jpg";
-
+import Book from "./Book";
+import {books} from "./StaticData/BooksData";
 
 export default function ReturnBook() {
     return (
@@ -28,11 +29,11 @@ export default function ReturnBook() {
                             <label className={styles.inputTitle}>Select Book</label>
                             <input list="books" name="book" className={styles.formInput} placeholder="Search book"/>
                             <datalist id="books">
-                                <option value="Book1"/>
-                                <option value="Book2"/>
-                                <option value="Book3"/>
-                                <option value="Book4"/>
-                                <option value="Book5"/>
+                                {books.map(books=> 
+                                    <option>
+                                        <Book books={books}/>
+                                    </option>
+                                )}
                             </datalist>
                         </div>
 

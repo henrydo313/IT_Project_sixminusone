@@ -18,8 +18,8 @@ function App() {
         <Route path="/login" element={<Login />}/>
         <Route path="/add-book" element={<AddBook />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
-        <Route path="/manage-books/allocate-book" element={<AllocateBook />} />
-        <Route path="/manage-books/return-book" element={<ReturnBook />} />
+        <Route path="/allocate-book" element={<AllocateBook />} />
+        <Route path="/return-book" element={<ReturnBook />} />
         <Route path="/aboutUs" element={<AboutUs />}/>
         <Route path="/search" element={<Search />} />
         <Route path="/book/:id" element={<BookPage />} />

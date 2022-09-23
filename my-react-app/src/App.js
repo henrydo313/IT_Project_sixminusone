@@ -14,10 +14,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/login" element={<Login />}/>
-        <Route path="/addBook" element={<AddBook />} />
-        <Route path="/forgotPassword" element={<ForgotPassword />} />
-        <Route path="/manageBooks/allocateBook" element={<AllocateBook />} />
-        <Route path="/manageBooks/returnBook" element={<ReturnBook />} />
+        <Route path="/add-book" element={<AddBook />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/manage-books/allocate-book" element={<AllocateBook />} />
+        <Route path="/manage-books/return-book" element={<ReturnBook />} />
         <Route path="/aboutUs" element={<AboutUs />}/>
       </Routes>
     </div>

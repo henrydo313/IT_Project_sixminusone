@@ -7,6 +7,7 @@ import ForgotPassword from './components/ForgotPassword';
 import AllocateBook from './components/AllocateBook';
 import ReturnBook from './components/ReturnBook';
 import AboutUs from './components/AboutUs';
+import BookPage from './components/BookPage';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/manage-books/allocate-book" element={<AllocateBook />} />
         <Route path="/manage-books/return-book" element={<ReturnBook />} />
         <Route path="/aboutUs" element={<AboutUs />}/>
+        <Route path="/book/:id" element={<BookPage />} />
       </Routes>
     </div>
   );

@@ -1,15 +1,17 @@
 import React from 'react';
 import style from './CSS/book.module.css';
 import PropTypes from 'prop-types';
-import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const Book = ({books}) => {
-    const navigate = useNavigate();
     return (
-        <div className={style.BookContainer} onClick={() => navigate("/")}>
-            <img className={style.Book} src={books.image} alt='Book1'/>
-            <div className={style.Title}>{books.name}</div>
-        </div>
+        <Link to={`/book/${books.id}`}>
+            <div className={style.BookContainer} >
+                <img className={style.Book} src={books.image} alt='Book1'/>
+                <div className={style.Title}>{books.name}</div>
+            </div>
+        </Link>
+
     );
 }
 

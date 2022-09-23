@@ -5,7 +5,8 @@ let books = [
         name: "book0",
         id: 0,
         image: book1,
-        alttext: "book0"
+        alttext: "book0",
+        desc: "jashdjkhasdksahjdhksahdjkshakjdhskajhkjdhskjdahajkhdjkhsjkdhjksahjkdshajkdhjkaskjnkcnkjsnajkcnjskancjkasn"
     },
     {
         name: "erwtjkerjgkfdhkgfkjd,gfhjghlksfdjhglfdksjhgfdlkjghld",

@@ -18,7 +18,7 @@ export default function BookContainer({Books}) {
                 {Books.map(Books=> 
                     <li key={Books.id} className={style.BookContainerItem}>
                         <Book books={Books}/>
-                    </li>    
+                    </li>
                 )}
             </ul>
             <img className={style.Arrows} id={style.rightArrow} src={rightArrow} alt="rightArrow" onClick={() => scroll(-500)}/>

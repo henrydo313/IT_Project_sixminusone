@@ -12,6 +12,8 @@ class Books(models.Model):
     ISBN = models.CharField(max_length=16)
     genre = models.CharField(max_length=16)
     author = models.CharField(max_length=100,default='UNKNOWN')
+    description = models.CharField(max_length=10000, default='-')
+    image = models.ImageField(null=True, blank = True, upload_to = "images/")
     addtime=models.DateTimeField(default=timezone.now)
 
 #class Meta:

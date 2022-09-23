@@ -17,7 +17,7 @@
 
         <h3>Add Book Info</h3>
 
-        <form action="{% url 'insertbooks' %}" method="post">
+        <form action="{% url 'insertbooks' %}" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             <table width="280" border="0">
                <tr>
@@ -35,14 +35,22 @@
                <tr>
                 <td>Author: </td>
                 <td><input type="text" name="author"/></td>
-              </tr>
+                </tr>
+                <tr>
+                <td>Description: </td>
+                <td><input type="text" name="description"/></td>
+                </tr>
+                <td>Image: </td>
+                <td><input type="file" name="image"/></td>
+                </tr>
+
               
-               <tr>
+                <tr>
                  <td colspan="2" align="center">
                     <input type="submit" value="Add"/>
                     <input type="reset" value="Reset"/>
                  </td>
-               </tr>
+                </tr>
             </table>
             </form>
 

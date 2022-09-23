@@ -59,7 +59,8 @@ def insertBooks(request):
         ob.genre = request.POST['genre']
         ob.ISBN = request.POST['ISBN']
         ob.author = request.POST['author']
-        #ob.image
+        ob.description = request.POST['description']
+        ob.image = request.FILES['image']
         ob.save()
         context = {"info": "Insert Successful"}
     except:
@@ -99,6 +100,8 @@ def updateBooks(request):
         ob.genre = request.POST['genre']
         ob.ISBN = request.POST['ISBN']
         ob.author = request.POST['author']
+        ob.description = request.POST['description']
+        ob.image = request.FILES['image']
         ob.save()
         context = {"info": "Update Successful"}
     except:

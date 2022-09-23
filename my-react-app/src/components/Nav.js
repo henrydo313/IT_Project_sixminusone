@@ -12,7 +12,7 @@ export default function Nav() {
         <div className={style.nav}>
             <h1 className={style.name} onClick={()=>navigate("/")}>Library Management System</h1>
             <ul className={style.links}> 
-                <li className={style.items}>Popular</li>
+                <li className={style.items} onClick={()=>navigate("/search")}>Search</li>
                 <li className={style.items}>Latest</li>
                 <li className={style.items}>Books</li>
             </ul>

@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import PropTypes from 'prop-types';
 import Book from "./Book";
 import style from "./CSS/bookContainer.module.css";
 import leftArrow from "./Images/leftarrow.png";
@@ -25,8 +24,3 @@ export default function BookContainer({Books}) {
         </div>
     );
 }
-
-
-BookContainer.propTypes = {
-    Books: PropTypes.array.isRequired
-};

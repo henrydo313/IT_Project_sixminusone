@@ -1,6 +1,5 @@
 import React from 'react';
 import style from './CSS/book.module.css';
-import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const Book = ({books}) => {
@@ -15,8 +14,5 @@ const Book = ({books}) => {
     );
 }
 
-Book.propType = {
-    books: PropTypes.object.isRequired,
-}
 
 export default Book;

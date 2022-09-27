@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import style from './CSS/categorybook.module.css'
 
 
@@ -18,15 +17,11 @@ const CategoryBook = ({books}) => {
             </div>
             <div className={style.BookRight}>
                 <div className={style.BookCategory}>
-                    Category
+                    {books.category}
                 </div>
             </div>
         </div>
     );
-}
-
-CategoryBook.propType = {
-    books: PropTypes.object.isRequired,
 }
 
 export default CategoryBook

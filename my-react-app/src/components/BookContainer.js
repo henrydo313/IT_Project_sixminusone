@@ -14,7 +14,7 @@ export default function BookContainer({Books}) {
         <div className={style.BooksAndArrows}>
             <img className={style.Arrows} id={style.leftArrow} src={leftArrow} alt="leftArrow" onClick={() => scroll(500)}/>
             <ul className={style.BookContainerItems} id="container" ref={container}>
-                {Books.map(Books=> 
+                {Books.map(Books=>
                     <li key={Books.id} className={style.BookContainerItem}>
                         <Book books={Books}/>
                     </li>

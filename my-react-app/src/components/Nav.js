@@ -3,7 +3,6 @@ import style from './CSS/nav.module.css';
 import { useNavigate } from 'react-router-dom';
 
 
-
 export default function Nav() {
     const navigate = useNavigate();
     return ( 

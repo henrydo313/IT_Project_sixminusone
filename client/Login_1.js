@@ -24,8 +24,3 @@ document.addEventListener("DOMContentLoaded", () => {
         signupForm.classList.add("hiddenForm");
     })
 })
-
-
-// display incorrect username/password message
-// frontend form validation
-// remember me checkbox

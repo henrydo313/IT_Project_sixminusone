@@ -7,7 +7,6 @@ body {
 .formBody {
     display: flex;
     justify-content: center;
-    height: 100vh;
     background-image: url("../Images/opaque-library-image.png");
     background-position: center;
     background-size: cover;

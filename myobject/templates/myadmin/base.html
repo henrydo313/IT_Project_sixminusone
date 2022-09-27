@@ -35,14 +35,14 @@
       <!-- 侧栏迷你徽标 mini 50x50 pixels -->
       <span class="logo-mini"><b>餐</b></span>
       <!-- 常规状态标志和移动设备标志 -->
-      <span class="logo-lg"><b>订餐系统后台管理</b></span>
+      <span class="logo-lg"><b>Library mangement system</b></span>
     </a>
 
     <!-- Header Navbar 首部导航栏 -->
     <nav class="navbar navbar-static-top" role="navigation">
       <!-- Sidebar toggle button 侧边栏切换按钮 -->
       <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-        <span class="sr-only">切换导航</span>
+        <span class="sr-only">Toggle navigation</span>
       </a>
       <!-- 右栏菜单 -->
       <div class="navbar-custom-menu">
@@ -55,7 +55,7 @@
               <span class="label label-success">4</span>
             </a>
             <ul class="dropdown-menu">
-              <li class="header">你有4个短信息</li>
+              <li class="header">You have 4 notifications</li>
               <li>
                 <!-- 内部菜单：包含消息 -->
                 <ul class="menu">
@@ -67,8 +67,8 @@
                       </div>
                       <!-- 消息标题和时间 -->
                       <h4>
-                        我们都支持团队
-                        <small><i class="fa fa-clock-o"></i> 5 分钟</small>
+                        Banzai
+                        <small><i class="fa fa-clock-o"></i> 5 min</small>
                       </h4>
                       <!-- The message -->
                       <p>Why not buy a new awesome theme?</p>
@@ -78,7 +78,7 @@
                 </ul>
                 <!-- /.menu -->
               </li>
-              <li class="footer"><a href="#">查看所有信息</a></li>
+              <li class="footer"><a href="#">View all notifications</a></li>
             </ul>
           </li>
           <!-- /.messages-menu -->
@@ -91,7 +91,7 @@
               <span class="label label-warning">10</span>
             </a>
             <ul class="dropdown-menu">
-              <li class="header">你有10条通知信息</li>
+              <li class="header">You have 10 notifications</li>
               <li>
                 <!-- Inner Menu: contains the notifications -->
                 <ul class="menu">
@@ -150,7 +150,7 @@
               <!-- The user image in the navbar-->
               <img src="{% static 'myadmin/dist/img/user2-160x160.jpg'%}" class="user-image" alt="User Image">
               <!-- hidden-xs hides the username on small devices so only the image appears. -->
-              <span class="hidden-xs">张无忌</span>
+              <span class="hidden-xs">Ben</span>
             </a>
             <ul class="dropdown-menu">
               <!-- The user image in the menu -->
@@ -158,17 +158,17 @@
                 <img src="{% static 'myadmin/dist/img/user2-160x160.jpg'%}" class="img-circle" alt="User Image">
 
                 <p>
-                  张无忌 - 管理员
+                  Ben - Admin
                   <small>2020年07月16日加入</small>
                 </p>
               </li>
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">个人信息</a>
+                  <a href="#" class="btn btn-default btn-flat">Personal profile</a>
                 </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">退 出</a>
+                  <a href="#" class="btn btn-default btn-flat">Exit</a>
                 </div>
               </li>
             </ul>
@@ -191,36 +191,36 @@
           <img src="{% static 'myadmin/dist/img/user2-160x160.jpg'%}" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>张无忌 . 管理员</p>
+          <p>Ben . Admin</p>
           <!-- Status -->
-          <a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
 
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">主要导航</li>
+        <li class="header">Main menu</li>
         <!-- 导航列表，你可以自行更改图标 -->
-        <li class="active"><a href="{% url 'myadmin_index' %}"><i class="fa fa-home"></i> <span>首页</span></a></li>
+        <li class="active"><a href="{% url 'myadmin_index' %}"><i class="fa fa-home"></i> <span>Home</span></a></li>
         
-        <li><a href="{% url 'myadmin_user_index' 1 %}"><i class="fa fa-users"></i> <span>员工管理</span></a></li>
-        <li><a href="shop.html"><i class="fa fa-sitemap"></i> <span>店铺管理</span></a></li>
+        <li><a href="{% url 'myadmin_user_index' 1 %}"><i class="fa fa-users"></i> <span>Employee management</span></a></li>
+        <li><a href="shop.html"><i class="fa fa-sitemap"></i> <span>Store management</span></a></li>
         <li class="treeview">
-          <a href="category.html"><i class="fa fa-cutlery"></i> <span>菜品管理</span>
+          <a href="category.html"><i class="fa fa-cutlery"></i> <span>Book management</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="category.html"> <i class="fa fa-circle-o"></i> 菜品分类</a></li>
-            <li><a href="product.html"> <i class="fa fa-circle-o"></i> 菜品信息</a></li>
+            <li><a href="category.html"> <i class="fa fa-circle-o"></i> Book category</a></li>
+            <li><a href="product.html"> <i class="fa fa-circle-o"></i> Book info</a></li>
           </ul>
         </li>
-        <li><a href="orders.html"><i class="fa fa-shopping-cart"></i> <span>订单管理</span></a></li>
-        <li><a href="#"><i class="fa fa-user"></i> <span>会员管理</span></a></li>
-        <li><a href="#"><i class="fa fa-key"></i> <span>权限管理</span></a></li>
-        <li><a href="#"><i class="fa fa-gear"></i> <span>系统配置</span></a></li>
-        <li><a href="#"><i class="fa fa-unlock-alt"></i> <span>认证体系</span></a></li>
+        <li><a href="orders.html"><i class="fa fa-shopping-cart"></i> <span>Order info</span></a></li>
+        <li><a href="#"><i class="fa fa-user"></i> <span>Customer management</span></a></li>
+        <li><a href="#"><i class="fa fa-key"></i> <span>Access management</span></a></li>
+        <li><a href="#"><i class="fa fa-gear"></i> <span>System settings</span></a></li>
+        <li><a href="#"><i class="fa fa-unlock-alt"></i> <span>Certification</span></a></li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>
@@ -241,7 +241,7 @@
       <!--餐饮管理平台-->
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2020 <a href="#">北京****有限公司</a>.</strong> 版权所有
+    <strong>Copyright &copy; 2020 <a href="#"></a>.</strong> 
   </footer>
 
   <!-- 添加侧栏的背景。必须放置此处紧接在控制侧边栏之后 -->
@@ -283,18 +283,21 @@
 <!-- 此处可以添加SimLoopl和FastClick插件，用于增强用户体验。 -->
 
 <script type="text/javascript">
-	/*
-    Modal.confirm({
-        msg: "确定要删除吗？",
-        title: ' 信息提示',
-        btnok: '确定',
-        btncl:'取消'
-      }).on(function (e){
-        if(e){
-          Modal.alert({msg: "成功删除",title: ' 信息提示',btnok: '确定',btncl:'取消'});
-        }
+    /*
+	function doDel(url){
+        Modal.confirm({
+            msg: "确定要删除吗？",
+            title: ' 信息提示',
+            btnok: '确定',
+            btncl:'取消'
+        }).on(function (e){
+            if(e){
+                window.location.href=url;
+            }
       });
-      */
+    }
+    */
+      
 </script>
 </body>
 </html>

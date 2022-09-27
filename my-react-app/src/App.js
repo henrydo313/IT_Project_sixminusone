@@ -9,7 +9,6 @@ import ReturnBook from './components/ReturnBook';
 import AboutUs from './components/AboutUs';
 import BookPage from './components/BookPage';
 import CategoryPage from './components/CategoryPage';
-import CategoryContainer from './components/CategoryContainer';
 
 function App() {
   return (
@@ -23,8 +22,7 @@ function App() {
         <Route path="/return-book" element={<ReturnBook />} />
         <Route path="/aboutUs" element={<AboutUs />}/>
         <Route path="/book/:id" element={<BookPage />} />
-        <Route path="/category" element={<CategoryPage />} />
-        <Route path="/categorycontainer" element={<CategoryContainer />} />
+        <Route path="/category/:category" element={<CategoryPage />} />
       </Routes>
     </div>
   );

@@ -1,3 +1,23 @@
 .CategoryContainerItems {
+    height: 70vh;
+    width: 50vw;
     list-style: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-x: hidden; 
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.CategoryContainerItems::-webkit-scrollbar {
+    display: none;
+}
+
+.Arrows {
+    text-align: center;
+}
+
+.ArrowsAndBooks {
+    display: flex;
+    flex-direction: column;
 }

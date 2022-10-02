@@ -21,6 +21,14 @@ urlpatterns = [
     # 后台首页
     path('', index.index, name="myadmin_index"),
 
+
+    # 后台管理员路由
+    path('login', index.login, name="myadmin_login"),
+    path('dologin', index.dologin, name="myadmin_dologin"),
+    path('logout', index.logout, name="myadmin_logout"),
+    path('verify', index.verify, name="myadmin_verify"), #验证码
+    
+
     path('user/<int:pIndex>', user.index, name="myadmin_user_index"),#浏览信息
     path('user/add', user.add, name="myadmin_user_add"),             #加载添加表单
     path('user/insert', user.insert, name="myadmin_user_insert"),     #执行信息添加

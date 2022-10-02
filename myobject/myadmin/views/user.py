@@ -46,6 +46,11 @@ def insert(request):
         ob.username = request.POST['username']
         ob.nickname = request.POST['nickname']
 
+        # Confirm password
+        if request.POST['password'] != request.POST["repassword"]:
+            context={"info":"Confirm password must match!"}
+            return render(request,"myadmin/info.html",context)
+
         #获取密码并md5
         md5 = hashlib.md5()
         n = random.randint(100000, 999999)

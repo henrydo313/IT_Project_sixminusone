@@ -51,9 +51,9 @@ def insert(request):
     try:
         ob = Category()
         #ob.id = request.POST['book_id']
-        ob.name = request.POST['name']
-        ob.genre = request.POST['genre']
+        ob.name = request.POST['name']  
         ob.ISBN = request.POST['ISBN']
+        ob.genre = request.POST['genre']
         ob.author = request.POST['author']
         ob.description = request.POST['description']
         ob.image = request.FILES['image']
@@ -66,6 +66,7 @@ def insert(request):
         print(err)
         context={"info":"Insert failed!"}
     return render(request,"myadmin/info.html",context)
+    
     
 
 def delete(request,cid=0):
@@ -92,14 +93,15 @@ def edit(request,cid=0):
 
 def update(request,cid):
     try:
+    
         ob = Category.objects.get(id=cid)
         ob.name = request.POST['name']
-        ob.status = request.POST['status']
-        ob.genre = request.POST['genre']
         ob.ISBN = request.POST['ISBN']
+        ob.genre = request.POST['genre']
         ob.author = request.POST['author']
         ob.description = request.POST['description']
         ob.image = request.FILES['image']
+        ob.status = request.POST['status']
         ob.update_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         ob.save()
         context={"info":"Edit successful！"}

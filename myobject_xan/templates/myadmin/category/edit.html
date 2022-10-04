@@ -25,49 +25,49 @@
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form class="form-horizontal" action="{% url 'myadmin_category_update' category.id  %}" method="post">
+            <form class="form-horizontal" action="{% url 'myadmin_category_update' category.id  %}" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
               <div class="box-body">
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label">Name：</label>
 
                   <div class="col-sm-4">
-                    <input type="text" name="name" class="form-control" id="inputText2" placeholder="name" />
+                    <input type="text" name="name" value="{{category.name}}" class="form-control" id="inputText2" placeholder="name" />
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label">ISBN：</label>
 
                   <div class="col-sm-4">
-                    <input type="text" name="name" class="form-control" id="inputText2" placeholder="ISBN" />
+                    <input type="text" name="ISBN" value="{{category.ISBN}}" class="form-control" id="inputText2" placeholder="ISBN" />
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label">Genre：</label>
 
                   <div class="col-sm-4">
-                    <input type="text" name="name" class="form-control" id="inputText2" placeholder="genre" />
+                    <input type="text" name="genre" value="{{category.genre}}" class="form-control" id="inputText2" placeholder="genre" />
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label">Author：</label>
 
                   <div class="col-sm-4">
-                    <input type="text" name="name" class="form-control" id="inputText2" placeholder="author" />
+                    <input type="text" name="author" value="{{category.author}}" class="form-control" id="inputText2" placeholder="author" />
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label">Description：</label>
 
                   <div class="col-sm-4">
-                    <input type="text" name="name" class="form-control" id="inputText2" placeholder="description" />
+                    <input type="text" name="description" value="{{category.description}}" class="form-control" id="inputText2" placeholder="description" />
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label">Image：</label>
 
                   <div class="col-sm-4">
-                    <input type="file" name="name" class="form-control" id="inputText2" placeholder="image" />
+                    <input type="file" name="image" value="{{category.image}}" class="form-control" id="inputText2" placeholder="image" />
                   </div>
                 </div>
                 <div class="form-group">

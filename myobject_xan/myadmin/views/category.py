@@ -2,7 +2,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.core.paginator import Paginator
-
+from django.db.models import Q
 from datetime import datetime
 import random, hashlib
 
@@ -18,19 +18,13 @@ def index(request, pIndex=1):
     kw = request.GET.get("keyword",None)
     if kw:
         # 查询员工账号或昵称中只要含有关键字的都可以
-        ulist = ulist.filter(name__contains=kw)
+        ulist = ulist.filter(Q(name__contains=kw)|Q(genre__contains=kw)|Q(author__contains=kw))
         mywhere.append("keyword="+kw)
     
-    # 获取、判断并封装关keyword键搜索
-    cid = request.GET.get("category_id",None)
-    if cid:
-        # 查询员工账号或昵称中只要含有关键字的都可以
-        ulist = ulist.filter(category_id=cid)
-        mywhere.append("category_id="+cid)
 
     #执行分页处理
     pIndex = int(pIndex)
-    page = Paginator(ulist,10) #以5条每页创建分页对象
+    page = Paginator(ulist,3) #以5条每页创建分页对象
     maxpages = page.num_pages #最大页数
 
     #判断页数是否越界

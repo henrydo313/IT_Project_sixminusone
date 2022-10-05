@@ -1,6 +1,7 @@
 # myobject/myadmin/views/index.py
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.http import JsonResponse
 from django.core.paginator import Paginator
 from django.db.models import Q
 from datetime import datetime
@@ -10,8 +11,9 @@ from myadmin.models import Category
 
 #后台首页
 def index(request, pIndex=1):
-    umod = Category.objects
-    ulist = umod.filter(status__lt=9)
+    
+    smod = Category.objects
+    ulist = smod.filter(status__lt=9)
     mywhere=[]
 
     # 获取、判断并封装关keyword键搜索
@@ -20,7 +22,12 @@ def index(request, pIndex=1):
         # 查询员工账号或昵称中只要含有关键字的都可以
         ulist = ulist.filter(Q(name__contains=kw)|Q(genre__contains=kw)|Q(author__contains=kw))
         mywhere.append("keyword="+kw)
-    
+
+    status = request.GET.get('status','')
+    if status != '':
+        ulist = ulist.filter(status=status)
+        mywhere.append("status="+status)
+
 
     #执行分页处理
     pIndex = int(pIndex)
@@ -34,9 +41,17 @@ def index(request, pIndex=1):
         pIndex = 1
     list2 = page.page(pIndex) #当前页数据
     plist = page.page_range   #页码数列表
-    context = {"categorylist":list2,'plist':plist,'pIndex':pIndex,'maxpages':maxpages, 'mywhere':mywhere}
-    return render(request,"myadmin/category/index.html",context)
+    
 
+    context = {"categorylist":list2,'plist':plist,'pIndex':pIndex,'maxpages':maxpages, 'mywhere':mywhere}
+
+    return render(request,"myadmin/category/index.html",context)
+    
+
+def loadCategory(request,sid):
+    clist = Category.objects.filter(status__lt=9,shop_id=sid).values("id","name")
+    #返回QuerySet对象，使用list强转成对应的菜品分类列表信息
+    return JsonResponse({'data':list(clist)})
 
 def add(request):
     return render(request,"myadmin/category/add.html")

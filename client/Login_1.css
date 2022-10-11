@@ -8,12 +8,12 @@ body {
     font: 500 1rem 'Outfit', sans-serif;
 }
 
-.formContainer{
+.formContainer {
     width: 400px;
     max-width: 400px;
     margin: 1rem;
     padding: 2rem;
-    background: rgb(242,242,242,1);
+    background: rgb(242, 242, 242, 1);
 }
 
 .hiddenForm {
@@ -82,7 +82,7 @@ body {
     transition: 0.4s;
     transform: scale(1.1);
     cursor: pointer;
-    
+
 }
 
 .formButton:active {
@@ -108,7 +108,7 @@ a:hover {
     text-align: center;
 }
 
-.switchForm > p {
+.switchForm>p {
     margin-top: 2rem;
 }
 

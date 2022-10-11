@@ -19,35 +19,35 @@ body {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.loginbox{
+.loginbox {
     margin-top: 100px;
     margin-bottom: 100px;
     font-family: arial;
 }
 
-.Login{  
+.Login {
     border: 1px solid #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
-    width: 900px;  
-    overflow: hidden;  
-    margin: auto;  
-    margin: 20 0 0 450px; 
-    padding-top: 40px; 
-    padding-bottom: 132px;   
+    width: 900px;
+    overflow: hidden;
+    margin: auto;
+    margin: 20 0 0 450px;
+    padding-top: 40px;
+    padding-bottom: 132px;
     background-color: white;
-}  
+}
 
-.loginLabel{  
-    color: black;  
-    font-size: 30px;  
+.loginLabel {
+    color: black;
+    font-size: 30px;
     text-align: center;
-}  
+}
 
-Label{  
-    color: black;  
+Label {
+    color: black;
     font-size: 17px;
-}  
+}
 
 .errorMessage {
     text-align: center;
@@ -72,23 +72,23 @@ Label{
 }
 
 input:focus {
-    outline-color: rgb(32,177,255);
+    outline-color: rgb(32, 177, 255);
 }
 
-#username{  
-    width: 350px;  
-    height: 30px;  
-    border: 1px solid black;  
-    border-radius: 10px; 
-    padding-left: 8px;  
-}  
+#username {
+    width: 350px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-left: 8px;
+}
 
-#password{
-    width: 350px;  
-    height: 30px;  
-    border: 1px solid black; 
-    border-radius: 10px;  
-    padding-left: 8px;  
+#password {
+    width: 350px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-left: 8px;
 }
 
 .forgotLink {
@@ -96,21 +96,21 @@ input:focus {
     margin-left: 500px;
 }
 
-#button{  
-    width: 300px;  
-    height: 30px; 
-    margin:20px 33% 0px;
-    border: 1px solid black; 
-    border-radius: 17px;  
-    padding-left: 7px;  
-    color: black;  
-}  
+#button {
+    width: 300px;
+    height: 30px;
+    margin: 20px 33% 0px;
+    border: 1px solid black;
+    border-radius: 17px;
+    padding-left: 7px;
+    color: black;
+}
 
 #button:hover {
     background-color: grey;
     color: white;
 }
 
-.signupText{
+.signupText {
     text-align: center;
 }

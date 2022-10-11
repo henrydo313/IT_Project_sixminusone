@@ -1,0 +1,73 @@
+body {
+    background-color: rgba(245, 122, 7, 0.5);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.CategoryContainer {
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    width: 900px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 5%;
+    padding-top: 40px;
+    padding-bottom: 5%;
+    background-color: white;
+    position: relative;
+
+}
+
+.AddCategoryLabel {
+    color: black;
+    font-size: 30px;
+    text-align: center;
+}
+
+.AddCategory {
+    margin-top: 5%;
+    margin-bottom: 8%;
+}
+
+.CategoryNameLabel{  
+    color: black;  
+    font-size: 17px;
+    margin: 10px 30%; ;
+} 
+
+.CategoryTextbox {
+    margin: 10px 30%;
+}
+
+#CategoryText {
+    width: 350px;  
+    height: 30px;  
+    border: 1px solid black;  
+    border-radius: 10px; 
+    padding-left: 8px; 
+}
+
+.StatusLabel {
+    color: black;  
+    font-size: 17px;
+    margin: 20px 30% 20px; 
+}
+
+.CategoryCheckBoxes {
+    margin: 20px 30% 20px; 
+}
+
+#button:hover {
+    background-color: grey;
+    color: lightgray;
+}
+
+#button {
+    width: 300px;  
+    height: 30px; 
+    margin:20px 33% 0px;
+    border: 1px solid black; 
+    border-radius: 17px;  
+    padding-left: 7px;  
+    color: black; 
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System - Login</title>
+    <link rel="stylesheet" href="Login_1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="formContainer">
+        <form action="" class="form" id="login">
+            <h1 class="formTitle">Login</h1>
+            <div class="errorMessage hiddenError">Incorrect username/password.</div>
+
+            <div class="inputBlock" id="usernameBlock">
+                <label for="usernameInput">Username</label>
+                <input type="text" class="formInput" id="usernameInput" placeholder="Enter username" autofocus>
+            </div>
+
+            <div class="inputBlock" id="passwordBlock">
+                <label for="passwordInput">Password</label>
+                <input type="password" class="formInput" id="passwordInput" placeholder="Enter password">
+            </div>
+
+            <div class="checkboxBlock" id="rememberMeBlock">
+                <input type="checkbox" id="rememberMe">
+                <label for="rememberMe">Remember Me</label>
+            </div>
+
+            <div class="buttonContainer">
+                <input type="submit" class="formButton" id="loginButton" value="Login">
+            </div>
+            <div class="linkContainer">
+                <a href="ForgotPass.html" id="forgotPasswordLink">Forgot password?</a>
+            </div>
+
+            <div class="switchForm">
+                <hr>
+                <p>Don't have an account?</p>
+                <input type="button" class="formButton switchToSignup" value="Sign Up">
+            </div>
+        </form>
+
+
+        <form action="" class="form hiddenForm" id="signup" onsubmit="return validateForm()">
+            <h1 class="formTitle">Sign Up</h1>
+
+            <div class="inputBlock" id="emailBlock">
+                <label for="emailInput">Email</label>
+                <input type="email" class="formInput" id="emailInput" placeholder="Enter email" autofocus>
+            </div>
+
+            <div class="inputBlock" id="usernameBlock">
+                <label for="usernameInput">Username</label>
+                <input type="text" class="formInput" id="usernameInput" placeholder="Enter username" >
+            </div>
+
+            <div class="inputBlock" id="passwordBlock">
+                <label for="passwordInput">Password</label>
+                <input type="password" class="formInput" id="passwordInput" placeholder="Enter password">
+            </div>
+
+            <div class="inputBlock" id="passwordConfirmBlock">
+                <label for="passwordInput">Confirm password</label>
+                <input type="password" class="formInput" id="passwordConfirmInput" placeholder="Re-enter password">
+            </div>
+
+            <div class="buttonContainer">
+                <input type="submit" class="formButton" id="signupButtom" value="Sign Up">
+            </div>
+
+            <div class="switchForm">
+                <hr>
+                <p>Already have an account?</p>
+                <input type="button" class="formButton switchToLogin" value="Login">
+            </div>
+        </form>
+    </div>
+
+    <script src="Login_1.js"></script>
+    
+</body>
+</html>

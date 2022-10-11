@@ -19,6 +19,10 @@ from django.urls import path
 
 from web.views import index
 
+from myadmin.views import user
+
 urlpatterns = [
-   path('', index.index, name="web_index"),
+    path('', index.index, name="web_index0"),
+    path('/<int:pIndex>', index.index, name="web_index"),
+    path('myadmin', index.login, name="web_login"),
 ]

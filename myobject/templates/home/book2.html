@@ -1,0 +1,149 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'myadmin/local/css/nav.css' %}">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Library management system</title>
+    <!-- 支持响应式布局 -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="{% static 'myadmin/bower_components/bootstrap/dist/css/bootstrap.min.css'%}">
+    <!-- 象形字体 -->
+    <link rel="stylesheet" href="{% static 'myadmin/bower_components/font-awesome/css/font-awesome.min.css'%}">
+    <!-- 图标 -->
+    <link rel="stylesheet" href="{% static 'myadmin/bower_components/Ionicons/css/ionicons.min.css'%}">
+    <!-- 主题风格样式 -->
+    <link rel="stylesheet" href="{% static 'myadmin/dist/css/AdminLTE.min.css'%}">
+    <!-- AdminLTE 皮肤.这里选择的是skin-blue样式，我们还可以有其他皮肤可以选择. -->
+   <!--<link rel="stylesheet" href="{% static 'myadmin/dist/css/skins/skin-blue.min.css'%}"> -->
+    <!-- 兼容IE9以下浏览器 -->
+    <!--[if lt IE 9]>
+    <script src="local/js/html5shiv.min.js"></script>
+    <script src="local/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- Google Font -->
+    <link rel="stylesheet" href="{% static 'myadmin/local/css/google_fonts.css'%}">
+  </head>
+  <body class="hold-transition skin-blue sidebar-mini">
+  <div class="wrapper">
+    <title>nav</title>
+</head>
+<body>
+    <div class="nav">
+        <!--<h1>Library Management System</h1>-->
+        <a href="{% url 'web_index' 1 %}"> Library management system </a>
+        <ul class="links"> 
+            <li class="items">Popular</li>
+            <li class="items">Latests</li>
+            <li class="items">Books</li>
+        </ul>
+        <!-- <input type='text' id='searchBox' placeholder='Search for book'></input> -->
+        <div class="box-tools">
+            <form action="{% url 'web_index' 1 %}" method ="get">
+              <div class="input-group input-group-sm" style="width: 150px;">
+                <input type="text" name="keyword" class="form-control pull-right" placeholder="Name/Genre/Author">
+
+                <div class="input-group-btn">
+                  <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                </div>
+              </div>
+            </form>
+          </div>
+        <!-- <ul class="login"> -->
+            <!-- <li class="loginButton">Login</li> -->
+        <a href="myadmin"> Login</a>
+        
+        </ul>
+    </div>
+</body>
+
+
+<section class="content container-fluid">
+
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="box">
+          <div class="box-header">
+            <h3 class="box-title"><i class="fa fa-calendar"></i> Books</h3>
+
+            
+          </div>
+          <!-- /.box-header -->
+          <div class="box-body table-responsive no-padding">
+            <table class="table table-hover">
+              <tr>
+                <th>ID</th>
+                <th>Book name</th>
+                <th>Genre</th>
+                <th>ISBN</th>
+                <th>Author</th>
+                <th>Description</th>
+                <th>Image</th>
+
+                <th>Status</th>
+                <th>Addtime</th>
+                <th>Edit time</th>
+                <th>Operation</th>
+              </tr>
+              {% for vo in categorylist %}
+              <tr>
+                <td>{{ vo.id }}</td>
+                <td>{{ vo.name }}</td>
+                <td>{{ vo.genre }}</td>
+                <td>{{ vo.ISBN }}</td>
+                <td>{{ vo.author }}</td>
+                <td>{{ vo.description }}</td>
+                
+                <td>
+                  {% if vo.image %}
+                  <img src = "{{ vo.image.url }}", width="100" >
+                  {% endif %}
+                </td>
+                <td>
+                  {% if vo.status == 1 %}
+                    <span style="color:green">Normal</span>
+                  {% elif vo.status == 9 %}
+                    <span style="color:red">Delete</span>
+                  {% else %}
+                    <span style="color:red">Unknown</span>
+                  {% endif %}
+                </td>
+                <td width="12%">{{ vo.create_at|date:'Y-m-d' }}</td>
+                <td width="12%">{{ vo.update_at|date:'Y-m-d' }}</td>
+                <td width="25%">
+                  <a href="{% url 'myadmin_category_edit' vo.id %}" class="btn btn-success btn-xs">
+                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Edit</a>
+                    <a type="button" href="{% url 'myadmin_category_delete' vo.id %}" class="btn btn-danger btn-xs">
+                      <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete</a>
+                  <a href="#" class="btn btn-warning btn-xs">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span> View book</a>
+                </td>
+              </tr>
+              {% endfor %}
+            </table>
+          </div>
+          <!-- /.box-body -->
+          <div class="box-footer clearfix">
+            <a role="button" href="{% url 'myadmin_category_add' %}" class="btn btn-primary">
+              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add book</a>
+              <ul class="pagination pagination-sm no-margin pull-right">
+                  <li><a href="{% url 'web_index' pIndex|add:-1 %}?{{mywhere|join:'&'}}">&laquo;</a></li>
+                  {% for p in plist %}
+                  <li {% if p == pIndex %}class="active"{% endif %}><a href="{% url 'web_index' p %}?{{mywhere|join:'&'}}">{{p}}</a></li>
+                  {% endfor %}
+                  <li><a href="{% url 'web_index' pIndex|add:1 %}?{{mywhere|join:'&'}}">&raquo;</a></li>
+              </ul>
+          </div>
+        </div>
+        <!-- /.box -->
+      </div>
+    </div>
+
+  </section>
+
+
+</html>

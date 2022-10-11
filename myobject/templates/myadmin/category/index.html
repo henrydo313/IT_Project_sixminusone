@@ -4,12 +4,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        菜品类别管理
-        <small>订餐系统后台管理</small>
+        Library management
+        <small>Book management system</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
-        <li class="active">菜品分类信息管理</li>
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Book management system</li>
       </ol>
     </section>
 
@@ -20,7 +20,7 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title"><i class="fa fa-calendar"></i> 菜品分类信息表</h3>
+              <h3 class="box-title"><i class="fa fa-calendar"></i> Book management system</h3>
 
               <div class="box-tools">
                 <form action="{% url 'myadmin_category_index' 1 %}" method ="get">
@@ -47,9 +47,9 @@
                   <th>Image</th>
 
                   <th>Status</th>
-                  <th>添加时间</th>
-                  <th>修改时间</th>
-                  <th>操作</th>
+                  <th>Addtime</th>
+                  <th>Edit time</th>
+                  <th>Operation</th>
                 </tr>
                 {% for vo in categorylist %}
                 <tr>
@@ -67,22 +67,22 @@
                   </td>
                   <td>
                     {% if vo.status == 1 %}
-                      <span style="color:green">正常</span>
+                      <span style="color:green">Normal</span>
                     {% elif vo.status == 9 %}
-                      <span style="color:red">已删除</span>
+                      <span style="color:red">Deleted</span>
                     {% else %}
-                      <span style="color:red">未知状态</span>
+                      <span style="color:red">Unknown</span>
                     {% endif %}
                   </td>
                   <td width="12%">{{ vo.create_at|date:'Y-m-d' }}</td>
                   <td width="12%">{{ vo.update_at|date:'Y-m-d' }}</td>
                   <td width="25%">
                     <a href="{% url 'myadmin_category_edit' vo.id %}" class="btn btn-success btn-xs">
-                      <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> 编辑</a>
+                      <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Edit</a>
                       <a type="button" href="{% url 'myadmin_category_delete' vo.id %}" class="btn btn-danger btn-xs">
                         <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete</a>
                     <a href="#" class="btn btn-warning btn-xs">
-                      <span class="glyphicon glyphicon-search" aria-hidden="true"></span> 查看菜品</a>
+                      <span class="glyphicon glyphicon-search" aria-hidden="true"></span> View book</a>
                   </td>
                 </tr>
                 {% endfor %}
@@ -91,7 +91,7 @@
             <!-- /.box-body -->
             <div class="box-footer clearfix">
               <a role="button" href="{% url 'myadmin_category_add' %}" class="btn btn-primary">
-                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 添加菜品分类</a>
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add book</a>
                 <ul class="pagination pagination-sm no-margin pull-right">
                     <li><a href="{% url 'myadmin_category_index' pIndex|add:-1 %}?{{mywhere|join:'&'}}">&laquo;</a></li>
                     {% for p in plist %}

@@ -16,6 +16,7 @@ Including another URLconf
 from django.urls import path
 from myadmin.views import index
 from myadmin.views import user
+from myadmin.views import category
 
 urlpatterns = [
     # 后台首页
@@ -36,4 +37,11 @@ urlpatterns = [
     path('user/edit/<int:uid>', user.edit, name="myadmin_user_edit"),#准备信息编辑
     path('user/update/<int:uid>', user.update, name="myadmin_user_update"),#执行信息编辑
 
+
+    path('user/category/<int:pIndex>', category.index, name="myadmin_category_index"),#浏览信息
+    path('user/category/add', category.add, name="myadmin_category_add"),             #加载添加表单
+    path('user/category/insert', category.insert, name="myadmin_category_insert"),     #执行信息添加
+    path('user/category/del/<int:cid>', category.delete, name="myadmin_category_delete"),#删除信息
+    path('user/category/edit/<int:cid>', category.edit, name="myadmin_category_edit"),#准备信息编辑
+    path('user/category/update/<int:cid>', category.update, name="myadmin_category_update"),#执行信息编辑
 ]

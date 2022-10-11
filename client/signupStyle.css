@@ -1,0 +1,103 @@
+body {
+    background-color: rgba(245, 122, 7, 0.5);
+}
+
+/* .page{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.Register {
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    width: 900px;
+    overflow: hidden;
+    margin: auto;
+    /* margin: 20 0 0 450px; */
+    padding-top: 40px;
+    padding-bottom: 132px;
+    background-color: white;
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    font-family: arial;
+}
+
+h1 {
+    color: black;
+    font-size: 30px;
+    text-align: center;
+}
+
+Label {
+    color: black;
+    font-size: 17px;
+}
+
+.Email {
+    margin: 40px 30%;
+}
+
+.Username {
+    margin: 40px 30%;
+}
+
+.Password {
+    margin: 40px 30%;
+}
+
+.ConfirmPassword {
+    margin: 40px 30%;
+}
+
+input {
+    width: 350px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-left: 8px;
+}
+
+input:focus {
+    outline-color: rgb(32, 177, 255);
+}
+
+input[id=signupButton] {
+    width: 186px;
+    height: 40px;
+    margin-left: 230px;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding-left: 7px;
+    top: 50px;
+    position: relative;
+    color: black;
+}
+
+input[id=backButton] {
+    width: 186px;
+    height: 40px;
+    margin-left: 150px;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding-left: 7px;
+    top: 50px;
+    position: relative;
+    color: black;
+}
+
+input[name=button]:hover {
+    background-color: grey;
+    color: white;
+    transition: 0.4s;
+    transform: scale(1.1);
+}
+
+.buttons {
+    width: 100%;
+    height: 40px;
+}

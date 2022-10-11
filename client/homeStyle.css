@@ -39,26 +39,6 @@ body {
     justify-content: space-between;
 }
 
-.Categories {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 0 10% 30px;
-}
-
-.CategoryImage {
-    width: 100%;
-    height: auto;
-    padding: 10px 15px
-}
-
-.CategoryImage:hover {
-    cursor: pointer;
-}
-
-.CategoryImage:active {
-    transform: scale(0.90);
-}
-
 .BookContainerItems {
     display: flex;
     -ms-overflow-style: none;
@@ -96,11 +76,7 @@ body {
     height: 5vw;
 }
 
-#leftArrow:active {
-    transform: scale(0.90);
-}
-
-#rightArrow:active {
+.Arrows:active {
     transform: scale(0.90);
 }
 

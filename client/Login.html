@@ -4,48 +4,90 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="loginStyle.css"> 
-    <title>Login</title>
+    <title>Library Management System - Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
 </head>
 <body>
-    <input type="button" name="homeButton" id="homeButton" value="Home" onclick="window.location.href='Home.html'">
-    <div class="loginbox">
-        <div class="Login">
-            <div class="loginLabel">Sign In</div>
-            <div class="errorMessage correctComb">Incorrect username/password combination.</div>
-            <div class="Username">
-                <label>Username</label>
-                <input type="text" name="username" id="username" placeholder="Enter username" autofocus>
-            </div>
-            <div class="Password">
-                <label>Password</label>
-                <input type="password" name="password" id="password" placeholder="Enter password">
-            </div>
-            <div class="Remember"> 
-                <input type="checkbox">
-                <label>Remember Me</label>
-            </div>
-            <input type="button" name="button" id="button" value="Login"></button>
-            <div class="forgotLink">
-                <a href="Forgotpass.html">Forgot password?</a>
-            </div>
-            
-            <div class="signupText">
-                <hr>
-                <label>or</label>
-    
-                <br>
-                <label>Don't have an account?</label>
-            </div>
 
-            
-            <input type="button" name="button" id="button" value="Sign Up" onclick="window.location.href='Signup.html'"></button>
-            
-            <div>
+    <div class="formBody">
+        <div class="formContainer">
+            <form action="" class="form" id="login">
+                <h1 class="formTitle">Login</h1>
+                <div class="errorMessage hiddenError">Incorrect username/password.</div>
 
-            </div>
+                <div class="inputBlock" id="usernameBlock">
+                    <label>Username</label>
+                    <input type="text" class="formInput usernameInput" placeholder="Enter username" autoFocus/>
+                </div>
+
+                <div class="inputBlock" id="passwordBlock">
+                    <label>Password</label>
+                    <input type="password" class="formInput passwordInput" placeholder="Enter password"/>
+                </div>
+
+                <div class="checkboxBlock" id="rememberMeBlock">
+                    <input type="checkbox" id="rememberMe"/>
+                    <label>Remember Me</label>
+                </div>
+
+                <div class="buttonContainer">
+                    <input type="submit" class="formButton" id="loginButton" value="Login"/>
+                </div>
+                <div class="linkContainer">
+                    <a id="forgotPasswordLink" href="ForgotPassword.html">Forgot password?</a>
+                </div>
+
+                <div class="switchForm">
+                    <hr></hr>
+                    <p>Don't have an account?</p>
+                    <input type="button" class="formButton switchToSignup" value="Sign Up" onClick=""/>
+                </div>
+            </form>
+
+
+            <form action="" class="form hiddenForm" id="signup">
+                <h1 class="formTitle">Sign Up</h1>
+
+                <div class="inputBlock" id="nameBlock">
+                    <label>Full name</label>
+                    <input type="text" class="formInput nameInput" placeholder="Enter name" required/>
+                </div>
+
+                <div class="inputBlock" id="emailBlock">
+                    <label>Email</label>
+                    <input type="email" class="formInput emailInput" placeholder="Enter email" required/>
+                </div>
+
+                <div class="inputBlock" id="usernameBlock">
+                    <label>Username</label>
+                    <input type="text" class="formInput usernameInput" placeholder="Enter username" required/>
+                </div>
+
+                <div class="inputBlock" id="passwordBlock">
+                    <label>Password</label>
+                    <input type="password" class="formInput passwordInput" placeholder="Enter password" required/>
+                </div>
+
+                <div class="inputBlock" id="passwordConfirmBlock">
+                    <label>Confirm password</label>
+                    <input type="password" class="formInput passwordConfirmInput" placeholder="Re-enter password" required/>
+                </div>
+
+                <div class="buttonContainer">
+                    <input type="submit" class="formButton" id="signupButtom" value="Sign Up" onClick=""/>
+                </div>
+
+                <div class="switchForm">
+                    <hr></hr>
+                    <p>Already have an account?</p>
+                    <input type="button" class="formButton switchToLogin" value="Login" onClick=""/>
+                </div>
+            </form>
         </div>
     </div>
 
+    <script src="Login.js"></script>
+    
 </body>
 </html>

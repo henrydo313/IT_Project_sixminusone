@@ -11,41 +11,11 @@
 </head>
 
 <body>
-    <input type="button" name="homeButton" id="homeButton" value="Home" onclick="window.location.href='Home.html'">
-    <div class="loginbox">
-        <div class="Login">
-            <div class="loginLabel">Sign In</div>
-            <div class="errorMessage correctComb">Incorrect username/password combination.</div>
-            <div class="Username">
-                <label>Username</label>
-                <input type="text" name="username" id="username" placeholder="Enter username" autofocus>
-            </div>
-            <div class="Password">
-                <label>Password</label>
-                <input type="password" name="password" id="password" placeholder="Enter password">
-            </div>
-            <div class="Remember">
-                <input type="checkbox">
-                <label>Remember Me</label>
-            </div>
-            <input type="button" name="button" id="button" value="Login"></button>
-            <div class="forgotLink">
-                <a href="Forgotpass.html">Forgot password?</a>
-            </div>
-
-            <div class="signupText">
-                <hr>
-                <label>or</label>
-
-                <br>
-                <label>Don't have an account?</label>
-            </div>
-
-
-            <input type="button" name="button" id="button" value="Sign Up"
-                onclick="window.location.href='Signup.html'"></button>
-
-            <div>
+    <div class="formBody">
+        <div class="formContainer">
+            <form action="" class="form" id="login">
+                <h1 class="formTitle">Login</h1>
+                <div class="errorMessage hiddenError">Incorrect username/password.</div>
 
                 <div class="inputBlock" id="usernameBlock">
                     <label>Username</label>

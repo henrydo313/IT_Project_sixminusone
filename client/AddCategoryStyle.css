@@ -29,32 +29,33 @@ body {
     margin-bottom: 8%;
 }
 
-.CategoryNameLabel{  
-    color: black;  
+.CategoryNameLabel {
+    color: black;
     font-size: 17px;
-    margin: 10px 30%; ;
-} 
+    margin: 10px 30%;
+    ;
+}
 
 .CategoryTextbox {
     margin: 10px 30%;
 }
 
 #CategoryText {
-    width: 350px;  
-    height: 30px;  
-    border: 1px solid black;  
-    border-radius: 10px; 
-    padding-left: 8px; 
+    width: 350px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-left: 8px;
 }
 
 .StatusLabel {
-    color: black;  
+    color: black;
     font-size: 17px;
-    margin: 20px 30% 20px; 
+    margin: 20px 30% 20px;
 }
 
 .CategoryCheckBoxes {
-    margin: 20px 30% 20px; 
+    margin: 20px 30% 20px;
 }
 
 #button:hover {
@@ -63,11 +64,11 @@ body {
 }
 
 #button {
-    width: 300px;  
-    height: 30px; 
-    margin:20px 33% 0px;
-    border: 1px solid black; 
-    border-radius: 17px;  
-    padding-left: 7px;  
-    color: black; 
+    width: 300px;
+    height: 30px;
+    margin: 20px 33% 0px;
+    border: 1px solid black;
+    border-radius: 17px;
+    padding-left: 7px;
+    color: black;
 }

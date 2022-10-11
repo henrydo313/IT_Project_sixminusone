@@ -33,15 +33,15 @@ body {
 
 #input {
     display: inline-flex;
-    width: 300px;  
+    width: 300px;
     height: 30px;
 }
 
 .Label {
     display: inline-flex;
-    width: 300px;  
+    width: 300px;
     height: 30px;
-    margin: 60px 0px 5px; 
+    margin: 60px 0px 5px;
 }
 
 .AddBookContainer {
@@ -67,10 +67,10 @@ body {
 
 #button {
     width: 8rem;
-    height: 2rem; 
-    border: 1px solid black; 
-    border-radius: 17px;  
-    padding-left: 7px;  
+    height: 2rem;
+    border: 1px solid black;
+    border-radius: 17px;
+    padding-left: 7px;
     background-color: #1454ca;
     border: 1px solid #1454ca;
     color: white;

@@ -28,7 +28,7 @@ class Category(models.Model):
     author = models.CharField(max_length=100,default='UNKNOWN')
     description = models.CharField(max_length=10000, default='-')
     image = models.ImageField(null=True, blank = True, upload_to = "images/")
-    addtime=models.DateTimeField(default=timezone.now)
+    addtime=models.DateTimeField(default=datetime.now)
     create_at = models.DateTimeField(default=datetime.now)    #创建时间
     update_at = models.DateTimeField(default=datetime.now) 
     class Meta:

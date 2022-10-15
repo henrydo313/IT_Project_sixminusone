@@ -22,7 +22,16 @@ from web.views import index
 from myadmin.views import user
 
 urlpatterns = [
-    path('', index.index, name="web_index0"),
-    path('/<int:pIndex>', index.index, name="web_index"),
+    path('', index.index0, name="web_index0"),
+    path('page/<int:pIndex>', index.index, name="web_index"),
+    path('cateEdu/<int:pIndex>', index.cateEdu, name="web_index_edu"),
+    path('cateHealth/<int:pIndex>', index.cateHealth, name="web_index_health"),
+    path('cateLaw/<int:pIndex>', index.cateLaw, name="web_index_law"),
+    path('cateScience/<int:pIndex>', index.cateScience, name="web_index_science"),
+    path('cateLiterature/<int:pIndex>', index.cateLiterature, name="web_index_literature"),
+    path('cateBAE/<int:pIndex>', index.cateBAE, name="web_index_BAE"),
+    path('book/<int:cid>', index.description, name="web_index_describe"),
+    path('aboutus', index.aboutUs, name="about"),
+   
     path('myadmin', index.login, name="web_login"),
 ]

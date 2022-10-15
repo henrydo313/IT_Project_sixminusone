@@ -204,23 +204,16 @@
         <li class="active"><a href="{% url 'myadmin_index' %}"><i class="fa fa-home"></i> <span>Home</span></a></li>
         
         <li><a href="{% url 'myadmin_user_index' 1 %}"><i class="fa fa-users"></i> <span>Employee management</span></a></li>
-        <li><a href="shop.html"><i class="fa fa-sitemap"></i> <span>Store management</span></a></li>
-        <li class="treeview">
-          <a href="category.html"><i class="fa fa-cutlery"></i> <span>Book management</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="{% url 'myadmin_category_index' 1 %}"> <i class="fa fa-circle-o"></i> Book category</a></li>
-            <li><a href="product.html"> <i class="fa fa-circle-o"></i> Book info</a></li>
+        
+       
+
+          <li><a href="{% url 'myadmin_category_index' 1 %}"><i class="fa fa-circle-o"></i> <span>Book management</span></a></li>
+          <!-- <ul class="treeview-menu"> -->
+            <!-- <li><a href="{% url 'myadmin_category_index' 1 %}"> <i class="fa fa-circle-o"></i> Book category</a></li> -->
+            
           </ul>
         </li>
-        <li><a href="orders.html"><i class="fa fa-shopping-cart"></i> <span>Order info</span></a></li>
-        <li><a href="#"><i class="fa fa-user"></i> <span>Customer management</span></a></li>
-        <li><a href="#"><i class="fa fa-key"></i> <span>Access management</span></a></li>
-        <li><a href="#"><i class="fa fa-gear"></i> <span>System settings</span></a></li>
-        <li><a href="#"><i class="fa fa-unlock-alt"></i> <span>Certification</span></a></li>
+        
       </ul>
       <!-- /.sidebar-menu -->
     </section>

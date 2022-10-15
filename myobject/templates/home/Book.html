@@ -13,20 +13,21 @@
 <body>
   <div class="Container">
     <div class="img-col">
-      <img src="img/atomic Habit.jpeg" alt="Atomic Habit" />
+      <img src="{{ book.image.url }}" alt="Atomic Habit" />
     </div>
     <div class="book-col">
-      <h1>Atomic Habits: the life-changing</h1>
-      <h2>by James Clear</h2>
+      <h1>{{book.name}}</h1>
+      <h2>By {{book.author}}</h2>
       <p>★★★★★ 5.0</p>
-      <p>No matter your goals, Atomic Habits offers a proven framework for improving—every day. James Clear, one of the
-        world's leading experts on habit formation, reveals practical strategies that will teach you exactly how to form
-        good habits, break bad ones, and master the tiny behaviors that lead to remarkable results.</p>
+      <p>{{book.description}}</p>
     </div>
   </div>
   <div class="buttonContainer">
     <input type="button" class="Button" id="editButton" value="Reserve Book" />
+    
 </div>
+<a href="{% url 'web_index' 1 %}"> Back</a>
+
 
 
 </body>

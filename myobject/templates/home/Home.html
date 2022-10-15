@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'myadmin/local/css/nav.css' %}">
-    <link rel="stylesheet" href="{% static 'myadmin/local/css/homestyle.css' %}"> 
+    <link rel="stylesheet" href="{% static 'myadmin/local/css/homeStyle.css' %}"> 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>订餐系统后台管理</title>
+    <title>Library management system</title>
     <!-- 支持响应式布局 -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link rel="stylesheet" href="{% static 'myadmin/bower_components/bootstrap/dist/css/bootstrap.min.css'%}">
@@ -31,11 +31,13 @@
 </head>
 <body>
     <div class="nav">
-        <h1>Library Management System</h1>
+        <a style="text-decoration: none; color:inherit; padding: 10px 15px" href="{% url 'web_index0' %}"> Library management system </a>
         <ul class="links"> 
-            <a href="{% url 'about'  %}"> About us </a>
-            <li class="items">Latests</li>
-            <a href="{% url 'web_index' 1 %}"> Books </a>
+            <ul class="links"> 
+                <li class="items"><a style="text-decoration: none; color:inherit"> Popular</a></li>
+                <li class="items">Latest</li>
+                <li class="items"><a style="text-decoration: none; color:inherit" a href="{% url 'web_index' 1 %}"> Books</a></li>
+            </ul>
         </ul>
         <div class="box-tools">
             <form action="{% url 'web_index' 1 %}" method ="get">
@@ -48,41 +50,38 @@
               </div>
             </form>
         </div>
-        <a href="{% url 'web_index' 1 %}"> Login</a>
-        <a href="{% url 'web_index_edu' 1 %}"> Education</a>
+        <a href="{% url 'web_login' %}"> Login</a>
+
     </div>
     <h1 class=CategoryLabel>Categories</h1>
     <div class=Categories>
-        <img class=CategoryImage src="{% static 'myadmin/local/img/CategoryImages/BaE.png'%}" alt='BusinessAndEcon'/>
-        <img class=CategoryImage src="{% static 'myadmin/local/img/CategoryImages/ESaT.png'%}" alt='Education'/>
-        <img class=CategoryImage src="{% static 'myadmin/local/img/CategoryImages/LaF.png'%}" alt='Literature'/>
-        <img class=CategoryImage src="{% static 'myadmin/local/img/CategoryImages/SNaM.png'%}" alt='Science'/>
-        <img class=CategoryImage src="{% static 'myadmin/local/img/CategoryImages/HFaN.png'%}" alt='Health'/>
-        <img class=CategoryImage src="{% static 'myadmin/local/img/CategoryImages/Law.png'%}" alt='Law'/>
+        <a href="{% url 'web_index_BAE' 1 %}"><img class = CategoryImage src="{% static 'myadmin/local/img/CategoryImages/BaE.png'%}" alt="BusinessAndEcon"></a>
+        <!-- <img class=CategoryImage src="{% static 'myadmin/local/img/CategoryImages/ESaT.png'%}" alt='Education'/> -->
+        <a href="{% url 'web_index_edu' 1 %}"><img class = CategoryImage src="{% static 'myadmin/local/img/CategoryImages/ESaT.png'%}" alt="Education"></a>
+        <!-- <img class=CategoryImage src="{% static 'myadmin/local/img/CategoryImages/LaF.png'%}" alt='Literature'/> -->
+        <a href="{% url 'web_index_literature' 1 %}"><img class = CategoryImage src="{% static 'myadmin/local/img/CategoryImages/LaF.png'%}" alt="Literature"></a>
+
+        <!-- <img class=CategoryImage src="{% static 'myadmin/local/img/CategoryImages/SNaM.png'%}" alt='Science'/> -->
+        <a href="{% url 'web_index_science' 1 %}"><img class = CategoryImage src="{% static 'myadmin/local/img/CategoryImages/SNaM.png'%}" alt="Science"></a>
+        <!-- <img class=CategoryImage src="{% static 'myadmin/local/img/CategoryImages/HFaN.png'%}" alt='Health'/> -->
+        <a href="{% url 'web_index_health' 1 %}"><img class = CategoryImage src="{% static 'myadmin/local/img/CategoryImages/HFaN.png'%}" alt="Health"></a>
+        <!-- <img class=CategoryImage src="{% static 'myadmin/local/img/CategoryImages/Law.png'%}" alt='Law'/> -->
+        <a href="{% url 'web_index_law' 1 %}"><img class = CategoryImage src="{% static 'myadmin/local/img/CategoryImages/Law.png'%}" alt="Law"></a>
+
     </div>
     <h1 class=PopularLabel>Popular</h1>
     <div class=BooksAndArrows>
         <img class=Arrows id=leftArrow src="{% static 'myadmin/local/img/leftarrow.png'%}" alt="leftArrow" />
-        {% for vo in categorylist %}
+        {% for vo in alllist %}
  
-                    <img class=Book src="{{ vo.image.url }}" alt='Book1'/>
+                    <a href="{% url 'web_index_describe' vo.id %}"><img class=Book src="{{ vo.image.url }}" alt='Book1'/></a>
 
         {% endfor %}
 
         <img class=Arrows id=rightArrow src="{% static 'myadmin/local/img/rightarrow.png'%}" alt="rightArrow"/>
     </div>
-    <h1 class=PopularLabel>Latest</h1>
-    <div class=BooksAndArrows>
-        <img class=Arrows id=leftArrow src="{% static 'myadmin/local/img/leftarrow.png'%}" alt="leftArrow"/>
-        <ul class=BookContainerItems id="container">
-            <li key=Books.id class=BookContainerItem>
-                <div class=BookContainer >
-                    <img class=Book src='img/BookCover/BookCover.jpg' alt='Book1'/>
-                    <div class=styleTitle>title</div>
-                </div>
-            </li>
-        </ul>
-        <img class=Arrows id=rightArrow src="{% static 'myadmin/local/img/rightarrow.png'%}" alt="rightArrow"/>
-    </div>
+
+    <a style="text-decoration: none; color:inherit" a href="{% url 'about'  %}"> About us </a>
+    
 </body>
 </html>

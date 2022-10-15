@@ -2,7 +2,7 @@ body {
     margin: 0;
 }
 
-.CategoryLabel {
+.CategoryLabel{
     font-size: 50px;
     margin-left: 200px;
 }
@@ -18,7 +18,7 @@ body {
     margin: 0 10% 30px;
 }
 
-.CategoryImage {
+.CategoryImage{
     width: 15%;
     height: auto;
     padding: 10px 15px
@@ -39,11 +39,31 @@ body {
     justify-content: space-between;
 }
 
+.Categories {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 10% 30px;
+}
+
+.CategoryImage{
+    width: 100%;
+    height: auto;
+    padding: 10px 15px
+}
+
+.CategoryImage:hover {
+    cursor: pointer;
+}
+
+.CategoryImage:active {
+    transform: scale(0.90);
+}
+
 .BookContainerItems {
     display: flex;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    overflow-x: auto;
+    overflow-x: auto; 
     overflow-y: hidden;
     width: 80vw;
     height: auto;
@@ -76,7 +96,11 @@ body {
     height: 5vw;
 }
 
-.Arrows:active {
+#leftArrow:active{
+    transform: scale(0.90);
+}
+
+#rightArrow:active{
     transform: scale(0.90);
 }
 
@@ -88,9 +112,8 @@ body {
     align-items: center;
     width: 100%;
     height: auto;
-
+    
 }
-
 .Books {
     margin: 0px 70px 0px;
 }
@@ -137,7 +160,7 @@ a {
     list-style: none;
 }
 
-.items {
+.items{
     padding: 10px 15px
 }
 
@@ -161,7 +184,7 @@ a {
     list-style: none;
 }
 
-.loginButton {
+.loginButton{
     margin-right: 30px;
     padding: 10px 15px
 }

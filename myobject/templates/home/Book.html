@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,11 +7,46 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Book</title>
-  <link rel="stylesheet" href="Book.css" />
+  <link rel="stylesheet" href="{% static 'myadmin/local/css/nav.css' %}">
+  <link rel="stylesheet" href="{% static 'myadmin/local/css/Book.css' %}"/>
   <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet" />
 </head>
 
 <body>
+  <div class="nav">
+    <a style="text-decoration: none; color:inherit" href="{% url 'web_index0' %}"> Library management system </a>
+    <ul class="links"> 
+        <li class="items"><a style="text-decoration: none; color:inherit" a href="{% url 'about'  %}"> About us </a></li>
+        <li class="items">Latests</li>
+        <li class="items"><a style="text-decoration: none; color:inherit" a href="{% url 'web_index' 1 %}"> All Books </a></li>
+    </ul>
+    <div class="box-tools">
+      <form action="{% url 'web_index' 1 %}" method ="get">
+        <div class="input-group input-group-sm" style="width: 150px;">
+          <input type="text" name="keyword" class="form-control pull-right" placeholder="Name/Genre/Author">
+
+          <div class="input-group-btn">
+            <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="box-tools">
+        <form action="{% url 'web_index' 1 %}" method ="get">
+          <div class="input-group input-group-sm" style="width: 150px;">
+            <input type="text" name="keyword" class="form-control pull-right" placeholder="Name/Genre/Author">
+
+            <div class="input-group-btn">
+              <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+            </div>
+          </div>
+        </form>
+    </div>
+    <a href="{% url 'web_login' %}"> Login</a>
+    <a href="{% url 'web_index_edu' 1 %}"> Education</a>
+</div>
+
   <div class="Container">
     <div class="img-col">
       <img src="{{ book.image.url }}" alt="Atomic Habit" />

@@ -15,6 +15,9 @@ def index(request, pIndex=1):
     ulist = smod.filter(status__lt=9)
     mywhere=[]
 
+    
+    
+
     # 获取、判断并封装关keyword键搜索
     kw = request.GET.get("keyword",None)
     if kw:
@@ -30,7 +33,7 @@ def index(request, pIndex=1):
 
     #执行分页处理
     pIndex = int(pIndex)
-    page = Paginator(ulist,1)#以5条每页创建分页对象
+    page = Paginator(ulist,5)#以5条每页创建分页对象
     maxpages = page.num_pages #最大页数
 
     #判断页数是否越界
@@ -49,8 +52,8 @@ def index(request, pIndex=1):
 
 def index0(request):
     smod = Category.objects
-    ulist = smod.filter(status__lt=9)[:5][::-1]
-    context = {"categorylist":ulist}
+    ulist = smod.filter(status__lt=9).order_by("-id")[:5]
+    context = {"alllist":ulist}
     return render(request,"home/Home.html",context)
 
 

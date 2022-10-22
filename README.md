@@ -37,10 +37,16 @@ Admin
 - Motivational Model
 - Architecture Diagram
 
-**To run the project**
+**To run the project (on your local machine)**
 
 ```
 python manage.py runserver
+```
+
+**To run the deployed version, visit**
+
+```
+http://chengyih.pythonanywhere.com/
 ```
 
 

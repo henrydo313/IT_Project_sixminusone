@@ -19,25 +19,16 @@ Library management system is important as it enhances the efficiency of both the
 **Features**
 
 User
-- Account Creation
-- Password Reset
-- Borrow books
-- View list of books by genre, author ....
+- View list of books by genre/author/title
 
 Admin
+- Admin create new accounts
 - Adding new books/ Remove books
 - Viewing/Editing status of books
 - Editing information of books
 - Notify user about overdue books
 - Update library register
-
-
-**Additional Features**
-
-User
-- Rate books
-- Recommendation
-
+- Change book availability
 
 **Documentation**
 
@@ -46,18 +37,10 @@ User
 - Motivational Model
 - Architecture Diagram
 
-
-
 **To run the project**
 
 ```
-# to run in development mode
-npm start
-
-#
-npm test
-
-npm run build
+python manage.py runserver
 ```
 
 

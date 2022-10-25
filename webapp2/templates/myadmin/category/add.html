@@ -1,91 +1,82 @@
 {% extends "myadmin/base.html" %}
 
-
 {% block main_body %}
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        Add book
-        <small>Add book information</small>
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Homepage</a></li>
-        <li class="active">Book Info Management</li>
-      </ol>
-    </section>
+<section class="content-header">
+  <h1>
+    Add book
+    <small>Add book information</small>
+  </h1>
+  <ol class="breadcrumb">
+    <li><a href="#"><i class="fa fa-dashboard"></i> Homepage</a></li>
+    <li class="active">Book Info Management</li>
+  </ol>
+</section>
 
-    <!-- Main content -->
-    <section class="content container-fluid">
+<section class="content container-fluid">
 
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="box">
-            <div class="box-header">
-                <h2 class="box-title"><span class="glyphicon glyphicon-calendar" aria-hidden="true">Insert Book Information</h2>
-            </div>
-            <!-- /.box-header -->
-            <!-- form start -->
-            <form class="form-horizontal" action="{% url 'myadmin_category_insert' %}" method="post" enctype="multipart/form-data">
-                {% csrf_token %}
-              <div class="box-body">
-                <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label">Name：</label>
-
-                  <div class="col-sm-4">
-                    <input type="text" name="name" class="form-control" id="inputText2" placeholder="name" />
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label">ISBN：</label>
-
-                  <div class="col-sm-4">
-                    <input type="text" name="ISBN" class="form-control" id="inputText2" placeholder="ISBN" />
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label">Genre：</label>
-
-                  <div class="col-sm-4">
-                    <input type="text" name="genre" class="form-control" id="inputText2" placeholder="genre" />
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label">Author：</label>
-
-                  <div class="col-sm-4">
-                    <input type="text" name="author" class="form-control" id="inputText2" placeholder="author" />
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label">Description：</label>
-
-                  <div class="col-sm-4">
-                    <input type="text" name="description" class="form-control" id="inputText2" placeholder="description" />
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label">Image：</label>
-
-                  <div class="col-sm-4">
-                    <input type="file" name="image" class="form-control" id="inputText2" placeholder="image" />
-                  </div>
-                </div>
-              </div>
-
-              <!-- /.box-body -->
-              <div class="box-footer">
-                <div class="col-sm-offset-2 col-sm-10">
-                  <button type="submit" class="btn btn-primary">Add</button> &nbsp;
-                  <button type="reset" class="btn btn-default">Reset</button>
-                <div class="col-sm-offset-2 col-sm-10">
-              </div>
-              <!-- /.box-footer -->
-            </form>
-          </div>
-          <!-- /.box -->
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="box">
+        <div class="box-header">
+          <h2 class="box-title"><span class="glyphicon glyphicon-calendar" aria-hidden="true">Insert Book Information</h2>
         </div>
-      </div>
+        <form class="form-horizontal" action="{% url 'myadmin_category_insert' %}" method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          <div class="box-body">
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label">Name：</label>
 
-    </section>
-    <!-- /.content -->
+              <div class="col-sm-4">
+                <input type="text" name="name" class="form-control" id="inputText2" placeholder="name" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label">ISBN：</label>
+
+              <div class="col-sm-4">
+                <input type="text" name="ISBN" class="form-control" id="inputText2" placeholder="ISBN" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label">Genre：</label>
+
+              <div class="col-sm-4">
+                <input type="text" name="genre" class="form-control" id="inputText2" placeholder="genre" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label">Author：</label>
+
+              <div class="col-sm-4">
+                <input type="text" name="author" class="form-control" id="inputText2" placeholder="author" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label">Description：</label>
+
+              <div class="col-sm-4">
+                <input type="text" name="description" class="form-control" id="inputText2" placeholder="description" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label">Image：</label>
+
+              <div class="col-sm-4">
+                <input type="file" name="image" class="form-control" id="inputText2" placeholder="image" />
+              </div>
+            </div>
+          </div>
+
+          <div class="box-footer">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-primary">Add</button> &nbsp;
+              <button type="reset" class="btn btn-default">Reset</button>
+              <div class="col-sm-offset-2 col-sm-10">
+              </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</section>
 {% endblock %}

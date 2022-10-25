@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'myadmin/local/css/nav.css' %}">
+  <link rel="stylesheet" href="{% static 'myadmin/local/css/homestyle.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>About us</title>
+  <!-- 支持响应式布局 -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="{% static 'myadmin/bower_components/bootstrap/dist/css/bootstrap.min.css'%}">
+  <!-- 象形字体 -->
+  <link rel="stylesheet" href="{% static 'myadmin/bower_components/font-awesome/css/font-awesome.min.css'%}">
+  <!-- 图标 -->
+  <link rel="stylesheet" href="{% static 'myadmin/bower_components/Ionicons/css/ionicons.min.css'%}">
+  <!-- 主题风格样式 -->
+  <link rel="stylesheet" href="{% static 'myadmin/dist/css/AdminLTE.min.css'%}">
+  <!-- AdminLTE 皮肤.这里选择的是skin-blue样式，我们还可以有其他皮肤可以选择. -->
+  <!--<link rel="stylesheet" href="{% static 'myadmin/dist/css/skins/skin-blue.min.css'%}"> -->
+  <!-- 兼容IE9以下浏览器 -->
+  <!--[if lt IE 9]>
+    <script src="local/js/html5shiv.min.js"></script>
+    <script src="local/js/respond.min.js"></script>
+    <![endif]-->
+  <!-- Google Font -->
+  <link rel="stylesheet" href="{% static 'myadmin/local/css/google_fonts.css'%}">
+
+</head>
+
+<body style="font-family: 'Outfit', sans-serif;">
+  <div class="nav">
+    <a style="text-decoration: none; color:inherit; padding: 10px 15px; font-size: 50px" href="{% url 'web_index0' %}"> Library management system </a>
+    <ul class="links">
+      <ul class="links">
+        <li class="items"><a style="text-decoration: none; color:inherit" a href="{% url 'about'  %}">About us</a></li>
+        <li class="items"><a style="text-decoration: none; color:inherit" a href="{% url 'web_index' 1 %}">Books</a></li>
+      </ul>
+    </ul>
+    <div class="box-tools">
+      <form action="{% url 'web_index' 1 %}" method="get">
+        <div class="input-group input-group-sm" style="width: 250px;">
+          <input type="text" name="keyword" class="form-control pull-right" placeholder="Name/Genre/Author">
+
+          <div class="input-group-btn">
+            <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <a href="{% url 'web_login' %}" style="font-size: 2rem;">Login</a>
+
+  </div>
+
+  <div className=aboutLabel style="margin: 50px 20px; font-size: 3rem;">
+    About Us
+  </div>
+  <div className=aboutText style="margin: 50px 20px; font-size: 1.75rem;">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum justo ac sapien mollis pulvinar. Duis volutpat est eget tortor luctus cursus. Nam at nulla nunc. Integer eget nisi vel purus iaculis interdum ut nec nisl. Quisque vel lacus
+    aliquet, tincidunt odio sodales, facilisis ante. Vivamus venenatis commodo erat, nec scelerisque eros congue vel. Nam viverra nisi at pulvinar facilisis. Ut commodo tellus et nisl consectetur cursus. Proin non consectetur nunc. Sed lobortis
+    congue luctus. Maecenas ut erat et nisl interdum sagittis quis in felis. Aenean tempus non lorem a lobortis. Quisque at tortor accumsan, ornare lorem a, auctor mi. Pellentesque leo nulla, ullamcorper sed orci ac, pretium feugiat nunc.
+  </div>
+</body>
+
+</html>

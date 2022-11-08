@@ -38,6 +38,7 @@ Admin
 - Architecture Diagram
 
 **To run the project (on your local machine)**
+1. Cd into the 
 
 ```
 python manage.py runserver

@@ -38,7 +38,8 @@ Admin
 - Architecture Diagram
 
 **To run the project (on your local machine)**
-1. Cd into the "LibraryApp" folder
+1. Cd into the "LibraryApp" folder on your terminal
+2. Then run the following command:
 
 ```
 python manage.py runserver

@@ -11,19 +11,18 @@ class ShopMiddleware(object):
 
     def __call__(self, request):
 
-        # 获取当前请求路径
+
         path = request.path
         print("mycall..."+path)
 
         urllist = ['/myadmin/login','/myadmin/dologin','/myadmin/logout','/myadmin/verify']
-        # 判断当前请求是否是访问网站后台,并且path不在urllist中
         if re.match(r"^/myadmin",path) and (path not in urllist):
             if "adminuser" not in request.session:
                 return redirect(reverse('myadmin_login'))
 
 
 
-        # 请求继续执行下去
+
         response = self.get_response(request)
         # Code to be executed for each request/response after
         # the view is called.

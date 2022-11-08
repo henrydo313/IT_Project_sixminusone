@@ -1,4 +1,4 @@
-# myobject/myadmin/views/index.py
+
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.core.paginator import Paginator
@@ -8,31 +8,31 @@ import random, hashlib
 
 from myadmin.models import User
 
-#后台首页
+
 def index(request, pIndex=1):
     umod = User.objects
     ulist = umod.filter(status__lt=9)
     mywhere=[]
 
-    # 获取、判断并封装关keyword键搜索
+
     kw = request.GET.get("keyword",None)
     if kw:
-        # 查询员工账号或昵称中只要含有关键字的都可以
+
         ulist = ulist.filter(Q(username__contains=kw) | Q(nickname__contains=kw))
         mywhere.append("keyword="+kw)
 
-    #执行分页处理
-    pIndex = int(pIndex)
-    page = Paginator(ulist,5) #以5条每页创建分页对象
-    maxpages = page.num_pages #最大页数
 
-    #判断页数是否越界
+    pIndex = int(pIndex)
+    page = Paginator(ulist,5)
+    maxpages = page.num_pages
+
+
     if pIndex > maxpages:
         pIndex = maxpages
     if pIndex < 1:
         pIndex = 1
-    list2 = page.page(pIndex) #当前页数据
-    plist = page.page_range   #页码数列表
+    list2 = page.page(pIndex)
+    plist = page.page_range
     context = {"userlist":list2,'plist':plist,'pIndex':pIndex,'maxpages':maxpages, 'mywhere':mywhere}
     return render(request,"myadmin/user/index.html",context)
 
@@ -51,10 +51,10 @@ def insert(request):
             context={"info":"Confirm password must match!"}
             return render(request,"myadmin/info.html",context)
 
-        #获取密码并md5
+
         md5 = hashlib.md5()
         n = random.randint(100000, 999999)
-        s = request.POST['password']+str(n) 
+        s = request.POST['password']+str(n)
         md5.update(s.encode('utf-8'))
         ob.password_hash = md5.hexdigest()
         ob.password_salt = n
@@ -67,7 +67,7 @@ def insert(request):
         print(err)
         context={"info":"Add failed!"}
     return render(request,"myadmin/info.html",context)
-    
+
 
 def delete(request,uid):
     try:

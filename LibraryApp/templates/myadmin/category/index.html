@@ -4,12 +4,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Library management
-        <small>Book management system</small>
+        Book management
+        <small>Library management system</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Book management system</li>
+        <li class="active">Book management</li>
       </ol>
     </section>
 
@@ -24,7 +24,7 @@
 
               <div class="box-tools">
                 <form action="{% url 'myadmin_category_index' 1 %}" method ="get">
-                  <div class="input-group input-group-sm" style="width: 150px;">
+                  <div class="input-group input-group-sm" style="width: 250px;">
                     <input type="text" name="keyword" class="form-control pull-right" placeholder="Name/Genre/Author">
 
                     <div class="input-group-btn">
@@ -59,7 +59,7 @@
                   <td>{{ vo.ISBN }}</td>
                   <td>{{ vo.author }}</td>
                   <td>{{ vo.description }}</td>
-                  
+
                   <td>
                     {% if vo.image %}
                     <img src = "{{ vo.image.url }}", width="100" >
@@ -67,11 +67,11 @@
                   </td>
                   <td>
                     {% if vo.status == 1 %}
-                      <span style="color:green">Normal</span>
+                      <span style="color:green">Available</span>
                     {% elif vo.status == 9 %}
-                      <span style="color:red">Deleted</span>
+                      <span style="color:red">Unavailable</span>
                     {% else %}
-                      <span style="color:red">Unknown</span>
+                      <span style="color:red">Unavailable</span>
                     {% endif %}
                   </td>
                   <td width="12%">{{ vo.create_at|date:'Y-m-d' }}</td>
@@ -81,8 +81,6 @@
                       <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Edit</a>
                       <a type="button" href="{% url 'myadmin_category_delete' vo.id %}" class="btn btn-danger btn-xs">
                         <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete</a>
-                    <a href="#" class="btn btn-warning btn-xs">
-                      <span class="glyphicon glyphicon-search" aria-hidden="true"></span> View book</a>
                   </td>
                 </tr>
                 {% endfor %}

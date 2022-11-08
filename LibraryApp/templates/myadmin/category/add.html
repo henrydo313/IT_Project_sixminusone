@@ -5,8 +5,8 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        菜品分类管理
-        <small>订餐系统后台管理</small>
+        Add book
+        <small>Add book information</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Homepage</a></li>
@@ -42,13 +42,7 @@
                     <input type="text" name="ISBN" class="form-control" id="inputText2" placeholder="ISBN" />
                   </div>
                 </div>
-                <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label">Genre：</label>
 
-                  <div class="col-sm-4">
-                    <input type="text" name="genre" class="form-control" id="inputText2" placeholder="genre" />
-                  </div>
-                </div>
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label">Author：</label>
 
@@ -71,12 +65,36 @@
                   </div>
                 </div>
               </div>
-              
+
+              <div class="form-group">
+                  <label class="col-sm-2 control-label">Category: </label>
+                  <div class="controls">
+                    &nbsp; &nbsp;
+                    <input type="radio" name="genre" class="input-xlarge" value="Education"
+                    {% if user.status == 1 %}checked{% endif %} /> Education
+                     &nbsp; &nbsp;
+                    <input type="radio" name="genre" class="input-xlarge" value="Business and Econ"
+                    {% if user.status == 2 %}checked{% endif %} /> Business
+                     &nbsp; &nbsp;
+                    <input type="radio" name="genre" class="input-xlarge" value="Science"
+                    {% if user.status == 6 %}checked{% endif %} /> Science
+                    &nbsp; &nbsp;
+                    <input type="radio" name="genre" class="input-xlarge" value="Literature"
+                    {% if user.status == 6 %}checked{% endif %} /> Literature
+                     &nbsp; &nbsp;
+                    <input type="radio" name="genre" class="input-xlarge" value="Health"
+                    {% if user.status == 6 %}checked{% endif %} /> Health
+                     &nbsp; &nbsp;
+                    <input type="radio" name="genre" class="input-xlarge" value="Law"
+                    {% if user.status == 6 %}checked{% endif %} /> Law
+                  </div>
+                </div>
+
               <!-- /.box-body -->
               <div class="box-footer">
                 <div class="col-sm-offset-2 col-sm-10">
-                  <button type="submit" class="btn btn-primary">提交</button> &nbsp; 
-                  <button type="reset" class="btn btn-default">重置</button>
+                  <button type="submit" class="btn btn-primary">Add</button> &nbsp;
+                  <button type="reset" class="btn btn-default">Reset</button>
                 <div class="col-sm-offset-2 col-sm-10">
               </div>
               <!-- /.box-footer -->

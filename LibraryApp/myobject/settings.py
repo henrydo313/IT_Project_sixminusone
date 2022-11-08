@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 from pathlib import Path
-# import pymysql  
+# import pymysql
 # pymysql.install_as_MySQLdb()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -83,11 +83,10 @@ WSGI_APPLICATION = 'myobject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'osdb',
-        'USER': 'root',
-        'PASSWORD': '37667616',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'NAME': 'chengyih$osdb',
+        'USER': 'chengyih',
+        'PASSWORD': 'Sixminusone',
+        'HOST': 'chengyih.mysql.pythonanywhere-services.com',
     }
 }
 
@@ -129,11 +128,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
+#STATICFILES_DIRS = [
+    #os.path.join(BASE_DIR, 'static'),
+#]
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+STATIC_ROOT = "/home/chengyih/IT_Project_sixminusone/myobject/static"
 
 
 # Default primary key field type

@@ -1,4 +1,4 @@
-# myobject/web/views/index.py
+
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.http import JsonResponse
@@ -9,19 +9,16 @@ import random, hashlib
 
 from myadmin.models import Category
 
-#前台首页
 def index(request, pIndex=1):
     smod = Category.objects
     ulist = smod.filter(status__lt=9)
     mywhere=[]
 
-    
-    
 
-    # 获取、判断并封装关keyword键搜索
+
+
     kw = request.GET.get("keyword",None)
     if kw:
-        # 查询员工账号或昵称中只要含有关键字的都可以
         ulist = ulist.filter(Q(name__contains=kw)|Q(genre__contains=kw)|Q(author__contains=kw))
         mywhere.append("keyword="+kw)
 
@@ -31,19 +28,19 @@ def index(request, pIndex=1):
         mywhere.append("status="+status)
 
 
-    #执行分页处理
-    pIndex = int(pIndex)
-    page = Paginator(ulist,5)#以5条每页创建分页对象
-    maxpages = page.num_pages #最大页数
 
-    #判断页数是否越界
+    pIndex = int(pIndex)
+    page = Paginator(ulist,5)
+    maxpages = page.num_pages
+
+
     if pIndex > maxpages:
         pIndex = maxpages
     if pIndex < 1:
         pIndex = 1
-    list2 = page.page(pIndex) #当前页数据
-    plist = page.page_range   #页码数列表
-    
+    list2 = page.page(pIndex)
+    plist = page.page_range
+
 
     context = {"categorylist":list2,'plist':plist,'pIndex':pIndex,'maxpages':maxpages, 'mywhere':mywhere}
 
@@ -59,7 +56,7 @@ def index0(request):
 
 
 def login(request):
-    return render(request,"myadmin/login.html")
+    return render(request,"myadmin/index/login.html")
 
 
 def cateEdu(request, pIndex=1):
@@ -67,10 +64,9 @@ def cateEdu(request, pIndex=1):
     ulist = smod.filter(status__lt=9)
     mywhere=[]
 
-    # 获取、判断并封装关keyword键搜索
     kw = "Education"
     if kw:
-        # 查询员工账号或昵称中只要含有关键字的都可以
+
         ulist = ulist.filter(Q(genre__contains=kw))
         mywhere.append("keyword="+kw)
 
@@ -79,19 +75,19 @@ def cateEdu(request, pIndex=1):
         ulist = ulist.filter(status=status)
         mywhere.append("status="+status)
 
-    #执行分页处理
-    pIndex = int(pIndex)
-    page = Paginator(ulist,1)#以5条每页创建分页对象
-    maxpages = page.num_pages #最大页数
 
-    #判断页数是否越界
+    pIndex = int(pIndex)
+    page = Paginator(ulist,5)
+    maxpages = page.num_pages
+
+
     if pIndex > maxpages:
         pIndex = maxpages
     if pIndex < 1:
         pIndex = 1
-    list2 = page.page(pIndex) #当前页数据
-    plist = page.page_range   #页码数列表
-    
+    list2 = page.page(pIndex)
+    plist = page.page_range
+
 
     context = {"categorylist":list2,'plist':plist,'pIndex':pIndex,'maxpages':maxpages, 'mywhere':mywhere}
 
@@ -99,41 +95,6 @@ def cateEdu(request, pIndex=1):
 
 
 
-
-def cateEdu(request, pIndex=1):
-    smod = Category.objects
-    ulist = smod.filter(status__lt=9)
-    mywhere=[]
-
-    # 获取、判断并封装关keyword键搜索
-    kw = "Education"
-    if kw:
-        # 查询员工账号或昵称中只要含有关键字的都可以
-        ulist = ulist.filter(Q(genre__contains=kw))
-        mywhere.append("keyword="+kw)
-
-    status = request.GET.get('status','')
-    if status != '':
-        ulist = ulist.filter(status=status)
-        mywhere.append("status="+status)
-
-    #执行分页处理
-    pIndex = int(pIndex)
-    page = Paginator(ulist,1)#以5条每页创建分页对象
-    maxpages = page.num_pages #最大页数
-
-    #判断页数是否越界
-    if pIndex > maxpages:
-        pIndex = maxpages
-    if pIndex < 1:
-        pIndex = 1
-    list2 = page.page(pIndex) #当前页数据
-    plist = page.page_range   #页码数列表
-    
-
-    context = {"categorylist":list2,'plist':plist,'pIndex':pIndex,'maxpages':maxpages, 'mywhere':mywhere}
-
-    return render(request,"home/book2.html",context)
 
 
 
@@ -143,10 +104,9 @@ def cateBAE(request, pIndex=1):
     ulist = smod.filter(status__lt=9)
     mywhere=[]
 
-    # 获取、判断并封装关keyword键搜索
     kw = "Business and Econ"
     if kw:
-        # 查询员工账号或昵称中只要含有关键字的都可以
+
         ulist = ulist.filter(Q(genre__contains=kw))
         mywhere.append("keyword="+kw)
 
@@ -155,19 +115,19 @@ def cateBAE(request, pIndex=1):
         ulist = ulist.filter(status=status)
         mywhere.append("status="+status)
 
-    #执行分页处理
-    pIndex = int(pIndex)
-    page = Paginator(ulist,1)#以5条每页创建分页对象
-    maxpages = page.num_pages #最大页数
 
-    #判断页数是否越界
+    pIndex = int(pIndex)
+    page = Paginator(ulist,5)
+    maxpages = page.num_pages
+
+
     if pIndex > maxpages:
         pIndex = maxpages
     if pIndex < 1:
         pIndex = 1
-    list2 = page.page(pIndex) #当前页数据
-    plist = page.page_range   #页码数列表
-    
+    list2 = page.page(pIndex)
+    plist = page.page_range
+
 
     context = {"categorylist":list2,'plist':plist,'pIndex':pIndex,'maxpages':maxpages, 'mywhere':mywhere}
 
@@ -179,10 +139,8 @@ def cateLiterature(request, pIndex=1):
     ulist = smod.filter(status__lt=9)
     mywhere=[]
 
-    # 获取、判断并封装关keyword键搜索
     kw = "Literature"
     if kw:
-        # 查询员工账号或昵称中只要含有关键字的都可以
         ulist = ulist.filter(Q(genre__contains=kw))
         mywhere.append("keyword="+kw)
 
@@ -191,19 +149,19 @@ def cateLiterature(request, pIndex=1):
         ulist = ulist.filter(status=status)
         mywhere.append("status="+status)
 
-    #执行分页处理
-    pIndex = int(pIndex)
-    page = Paginator(ulist,1)#以5条每页创建分页对象
-    maxpages = page.num_pages #最大页数
 
-    #判断页数是否越界
+    pIndex = int(pIndex)
+    page = Paginator(ulist,5)
+    maxpages = page.num_pages
+
+
     if pIndex > maxpages:
         pIndex = maxpages
     if pIndex < 1:
         pIndex = 1
-    list2 = page.page(pIndex) #当前页数据
-    plist = page.page_range   #页码数列表
-    
+    list2 = page.page(pIndex)
+    plist = page.page_range
+
 
     context = {"categorylist":list2,'plist':plist,'pIndex':pIndex,'maxpages':maxpages, 'mywhere':mywhere}
 
@@ -216,10 +174,10 @@ def cateScience(request, pIndex=1):
     ulist = smod.filter(status__lt=9)
     mywhere=[]
 
-    # 获取、判断并封装关keyword键搜索
+
     kw = "Science"
     if kw:
-        # 查询员工账号或昵称中只要含有关键字的都可以
+
         ulist = ulist.filter(Q(genre__contains=kw))
         mywhere.append("keyword="+kw)
 
@@ -228,19 +186,18 @@ def cateScience(request, pIndex=1):
         ulist = ulist.filter(status=status)
         mywhere.append("status="+status)
 
-    #执行分页处理
-    pIndex = int(pIndex)
-    page = Paginator(ulist,1)#以5条每页创建分页对象
-    maxpages = page.num_pages #最大页数
 
-    #判断页数是否越界
+    pIndex = int(pIndex)
+    page = Paginator(ulist,5)
+    maxpages = page.num_pages
+
     if pIndex > maxpages:
         pIndex = maxpages
     if pIndex < 1:
         pIndex = 1
-    list2 = page.page(pIndex) #当前页数据
-    plist = page.page_range   #页码数列表
-    
+    list2 = page.page(pIndex)
+    plist = page.page_range
+
 
     context = {"categorylist":list2,'plist':plist,'pIndex':pIndex,'maxpages':maxpages, 'mywhere':mywhere}
 
@@ -254,10 +211,9 @@ def cateLaw(request, pIndex=1):
     ulist = smod.filter(status__lt=9)
     mywhere=[]
 
-    # 获取、判断并封装关keyword键搜索
+
     kw = "Law"
     if kw:
-        # 查询员工账号或昵称中只要含有关键字的都可以
         ulist = ulist.filter(Q(genre__contains=kw))
         mywhere.append("keyword="+kw)
 
@@ -266,19 +222,18 @@ def cateLaw(request, pIndex=1):
         ulist = ulist.filter(status=status)
         mywhere.append("status="+status)
 
-    #执行分页处理
     pIndex = int(pIndex)
-    page = Paginator(ulist,1)#以5条每页创建分页对象
-    maxpages = page.num_pages #最大页数
+    page = Paginator(ulist,5)
+    maxpages = page.num_pages
 
-    #判断页数是否越界
+
     if pIndex > maxpages:
         pIndex = maxpages
     if pIndex < 1:
         pIndex = 1
-    list2 = page.page(pIndex) #当前页数据
-    plist = page.page_range   #页码数列表
-    
+    list2 = page.page(pIndex)
+    plist = page.page_range
+
 
     context = {"categorylist":list2,'plist':plist,'pIndex':pIndex,'maxpages':maxpages, 'mywhere':mywhere}
 
@@ -292,10 +247,9 @@ def cateHealth(request, pIndex=1):
     ulist = smod.filter(status__lt=9)
     mywhere=[]
 
-    # 获取、判断并封装关keyword键搜索
     kw = "Health"
     if kw:
-        # 查询员工账号或昵称中只要含有关键字的都可以
+
         ulist = ulist.filter(Q(genre__contains=kw))
         mywhere.append("keyword="+kw)
 
@@ -304,19 +258,19 @@ def cateHealth(request, pIndex=1):
         ulist = ulist.filter(status=status)
         mywhere.append("status="+status)
 
-    #执行分页处理
-    pIndex = int(pIndex)
-    page = Paginator(ulist,1)#以5条每页创建分页对象
-    maxpages = page.num_pages #最大页数
 
-    #判断页数是否越界
+    pIndex = int(pIndex)
+    page = Paginator(ulist,5)
+    maxpages = page.num_pages
+
+
     if pIndex > maxpages:
         pIndex = maxpages
     if pIndex < 1:
         pIndex = 1
-    list2 = page.page(pIndex) #当前页数据
-    plist = page.page_range   #页码数列表
-    
+    list2 = page.page(pIndex)
+    plist = page.page_range
+
 
     context = {"categorylist":list2,'plist':plist,'pIndex':pIndex,'maxpages':maxpages, 'mywhere':mywhere}
 
@@ -337,8 +291,8 @@ def description(request,cid=0):
 
 def aboutUs(request):
     return render(request,"home/AboutUs.html")
-    
-    
+
+
 
 
 
